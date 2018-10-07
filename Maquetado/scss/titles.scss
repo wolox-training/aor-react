@@ -1,0 +1,23 @@
+$gray-dark: #333;
+$text-big: 24px;
+$text-medium: 16px;
+$text-small: 12px;
+$font-roboto: 'Roboto', sans-serif;
+
+
+.title {
+  align-items: center;
+  background: url(assets/triangle.svg) no-repeat;
+  display: flex;
+  height: 50px;
+  padding-left: 30px;
+  
+}
+  h2 {
+    color: $gray-dark;
+    font-size: $text-big;
+    font-family: $font-roboto;
+
+  }
+  
+ 
