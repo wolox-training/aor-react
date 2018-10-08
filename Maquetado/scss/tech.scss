@@ -1,10 +1,20 @@
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
 .tech {
+  align-items: center;
   background-color: $green;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   padding: 48px;
   position: relative;
+  margin: 20px;
   width: 250px;
   
   &::before {
@@ -22,7 +32,6 @@
     -o-transition-duration: 700ms;
     transition-duration: 700ms;
   }
-
   &:hover::before {
     -ms-transform: translate(20px, 20px);
     -webkit-transform: translate(20px, 20px); 
@@ -35,6 +44,29 @@
   height: $tech-logo-size;
   margin-bottom: 10px;
   width: 100%;
+}
+
+.title-tech {
+  font-size: $text-big;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.release-tech {
+  font-weight: bold;
+  font-size: $text-medium;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.txt-tech {
+  text-align: center;
+}
+
+.img-tech {
+  height: $tech-logo-size;
+  margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .title-tech {
