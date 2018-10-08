@@ -1,0 +1,59 @@
+
+$tech-logo-size: 100px;
+$green: #BED23C;
+$text-big: 24px;
+$text-medium: 16px;
+$text-small: 12px;
+
+.row {
+    display: flex;
+    flex-flow: row nowrap; 
+    height: 100%;
+}
+
+.col {
+    border: 2px solid $green;
+    border-radius: 5px;
+    margin: 1em;
+    min-height: 350px;
+    padding: 1em;
+    position: relative;
+    width: 24%;
+}
+
+.square {
+    background-color: $green;
+    border-radius: 5px;
+    min-height: 350px;
+    right: -12px;
+    left: 12px;
+    padding: 1em;
+    position: absolute;
+    top: 12px;
+}
+
+img {
+    height: $tech-logo-size;
+    width: 100%;
+}
+
+h3 {
+    display: block;
+    font-size: $text-big;
+    margin: 10px 0;
+    text-align: center;
+}
+
+span {
+    display: block;
+    font-weight: bold;
+    font-size: $text-medium;
+    text-align: center;
+}
+
+p{
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+}
