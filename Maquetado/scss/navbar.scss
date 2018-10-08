@@ -1,0 +1,26 @@
+nav {
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 2px 15px #ccc;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 90px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  
+  & > h1 {
+    color:$gray-dark;
+    font-size: $text-big;
+    padding: 0 2em;
+  }
+  
+  & > img {
+    padding: 0 1em;
+  }
+}
+
+.space {
+  display: block;
+  padding-bottom: 110px;
+}
