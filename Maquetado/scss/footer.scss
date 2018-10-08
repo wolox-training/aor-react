@@ -1,0 +1,39 @@
+$blue: #00ADEE;
+$grey: #C4C4C4;
+$gray-dark: #333;
+$text-big: 24px;
+$text-medium: 16px;
+$text-small: 12px;
+$font-roboto: 'Roboto', sans-serif;
+
+
+footer{
+  align-items: center;
+  background-color: $blue;
+  display: flex;
+  flex-flow: column nowrap;
+  
+  
+  & > p {
+    color: white;
+    font-family: $font-roboto;
+    font-size: $text-big;
+    padding-top: 40px; 
+    
+  }
+  
+  & > span {
+    align-self: flex-end;
+    color: white;
+    font-size: $text-small;
+    font-weight: normal;
+    padding: 0 15px 15px 0;
+    
+  }
+  
+  & > img {
+    max-width: 400px;
+    
+    
+  }
+}
