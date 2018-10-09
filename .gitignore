@@ -9,3 +9,6 @@ Maquetado/*.css
 ## System ##
 .DS_Store
 .vscode
+Maquetado/scss/application.css
+READ.md
+application.css
