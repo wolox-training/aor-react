@@ -1,6 +1,8 @@
 .tech {
   background-color: $green;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   padding: 48px;
   position: relative;
   width: 250px;
@@ -24,14 +26,12 @@
   }
   
   .title-tech {
-    display: block;
     font-size: $text-big;
     margin-bottom: 10px;
     text-align: center;
   }
   
   .release-tech {
-    display: block;
     font-weight: bold;
     font-size: $text-medium;
     text-align: center;
@@ -39,7 +39,6 @@
   }
   
   .txt-tech {
-    display: block;
     text-align: center;
   }
 }
