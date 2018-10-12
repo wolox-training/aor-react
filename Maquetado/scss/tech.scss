@@ -17,28 +17,39 @@
     top: -10px;
     width: 100%;
     z-index: -1;
+    -webkit-transition-duration: 700ms;
+    -moz-transition-duration: 700ms;
+    -o-transition-duration: 700ms;
+    transition-duration: 700ms;
   }
-  
-  .img-tech {
-    height: $tech-logo-size;
-    margin-bottom: 10px;
-    width: 100%;
+
+  &:hover::before {
+    -ms-transform: translate(20px, 20px);
+    -webkit-transform: translate(20px, 20px); 
+    transform: translate(20px, 20px);
   }
-  
-  .title-tech {
-    font-size: $text-big;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .release-tech {
-    font-weight: bold;
-    font-size: $text-medium;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .txt-tech {
-    text-align: center;
-  }
+
+}
+
+.img-tech {
+  height: $tech-logo-size;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.title-tech {
+  font-size: $text-big;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.release-tech {
+  font-weight: bold;
+  font-size: $text-medium;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.txt-tech {
+  text-align: center;
 }
