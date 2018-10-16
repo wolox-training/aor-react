@@ -1,22 +1,23 @@
-nav {
+.head {
   align-items: center;
   background-color: white;
   box-shadow: 2px 2px 15px #ccc;
   display: flex;
   flex-flow: row nowrap;
-  height: 90px;
+  height: $nav-height;
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 1;
   
-  & > h1 {
+  .title-head {
     color:$gray-dark;
     font-size: $text-big;
-    padding: 0 2em;
+    padding: 0 15px;
   }
   
-  & > img {
-    padding: 0 1em;
+  .logo {
+    padding: 0 10px;
   }
 }
 
