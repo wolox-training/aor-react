@@ -32,12 +32,12 @@
     -o-transition-duration: 700ms;
     transition-duration: 700ms;
   }
+
   &:hover::before {
     -ms-transform: translate(20px, 20px);
     -webkit-transform: translate(20px, 20px); 
     transform: translate(20px, 20px);
   }
-  
 }
 
 .img-tech {
