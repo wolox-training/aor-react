@@ -1,5 +1,5 @@
 ### Sass ###
-*.sass-cache
+.sass-cache/
 Maquetado/.sass-cache/
 Maquetado/.scss-cache/
 Maquetado/*.css.map
