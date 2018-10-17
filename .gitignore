@@ -9,6 +9,7 @@ Maquetado/*.css
 Maquetado/**/*.sass.map
 Maquetado/**/*.scss.map
 Maquetado/**/*.css
+Maquetado/**/application.css.map
 
 ## System ##
 .DS_Store
