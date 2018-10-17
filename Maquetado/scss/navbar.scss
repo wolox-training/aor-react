@@ -1,9 +1,9 @@
 .head {
   align-items: center;
-  background-color: white;
+  background-color: $white-snow;
   box-shadow: 2px 2px 15px #ccc;
   display: flex;
-  flex-flow: row nowrap;
+  flex-wrap: nowrap;
   height: $nav-height;
   justify-content: space-between;
   position: fixed;
@@ -11,7 +11,7 @@
   z-index: 1;
   
   .title-head {
-    color:$gray-dark;
+    color: $gray-dark;
     font-size: $text-big;
     padding: 0 15px;
   }
@@ -19,9 +19,4 @@
   .logo {
     padding: 0 10px;
   }
-}
-
-.space {
-  display: block;
-  padding-bottom: 110px;
 }
