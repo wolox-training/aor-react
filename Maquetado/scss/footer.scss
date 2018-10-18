@@ -2,8 +2,8 @@
   align-items: center;
   background-color: $blue;
   display: flex;
-  flex-direction: column nowrap;
-  padding: 50px 15px 15px 10px;
+  flex-direction: column;
+  padding: 50px 15px 15px 15px;
   
   .text-footer {
     color: $white-snow;
@@ -15,7 +15,6 @@
     align-self: flex-end;
     color: $white-snow;
     font-size: $text-small;
-    font-weight: normal;
   }
   
   .img-logo {
