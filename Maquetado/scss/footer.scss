@@ -3,12 +3,13 @@
   background-color: $blue;
   display: flex;
   flex-direction: column;
-  padding: 50px 15px 15px 15px;
+  padding: 50px 15px 15px;
   
   .text-footer {
     color: $white-snow;
     font-family: $font-roboto;
     font-size: $text-big;
+    text-transform: uppercase;
   }
   
   .copy {
@@ -21,3 +22,4 @@
     max-width: 400px;
   }
 }
+    
