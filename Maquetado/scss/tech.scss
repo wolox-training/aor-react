@@ -16,12 +16,9 @@
   position: relative;
   width: 250px;
 
-  &:nth-child(1) {
+  &:first-child {
     border-right: 2px solid $green;
-    grid-column-end: 1;
-    grid-column-start: 1;
-    grid-row-end: 3;
-    grid-row-start: 1;
+    grid-row: 1 / span 2;
     padding-top: 13em;
   }
 }
