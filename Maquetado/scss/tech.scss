@@ -68,3 +68,30 @@
 .txt-tech {
   text-align: center;
 }
+
+@media only screen and (max-width: 1024px) {
+  .tech:first-child {
+    border-right: initial;
+    grid-row: initial;
+    padding-top: initial;
+  }
+
+  .tech {
+    border-bottom: 2px solid $green;
+    margin: 0 auto 40px;
+    width: 60%;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .row {
+    grid-template-columns: initial;
+  }
+
+  .content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
