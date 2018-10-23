@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import App from '~components/App'; // eslint-disable-line import/first
 import Game from '~screens/game/';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('header'));
 registerServiceWorker(); 
 
 
