@@ -71,9 +71,9 @@
 
 @media only screen and (max-width: 1024px) {
   .tech:first-child {
-    border-right: inherit;
-    grid-row: inherit;
-    padding-top: inherit;
+    border-right: initial;
+    grid-row: initial;
+    padding-top: initial;
   }
 
   .tech {
@@ -87,7 +87,7 @@
   }
 
   .row {
-    grid-template-columns: inherit;
+    grid-template-columns: initial;
   }
 
   .content {
