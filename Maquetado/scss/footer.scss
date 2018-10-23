@@ -4,22 +4,21 @@
   display: flex;
   flex-direction: column;
   padding: 50px 15px 15px;
-  
+
   .text-footer {
     color: $white-snow;
     font-family: $font-roboto;
     font-size: $text-big;
     text-transform: uppercase;
   }
-  
+
   .copy {
     align-self: flex-end;
     color: $white-snow;
     font-size: $text-small;
   }
-  
+
   .img-logo {
     max-width: 400px;
   }
 }
-    

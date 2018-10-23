@@ -1,42 +1,25 @@
 .row {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 960px;
   width: 100%;
 }
 
 .tech {
   align-items: center;
-  background-color: $green;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  padding: 48px;
-  position: relative;
   margin: 20px;
+  padding: 25px;
+  position: relative;
   width: 250px;
 
-  &::before {
-    content: "";
-    border-radius: 5px;
-    border: 1px solid $green;
-    height: 100%;
-    left: -10px;
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    z-index: -1;
-    -webkit-transition-duration: 700ms;
-    -moz-transition-duration: 700ms;
-    -o-transition-duration: 700ms;
-    transition-duration: 700ms;
-  }
-
-  &:hover::before {
-    -ms-transform: translate(20px, 20px);
-    -webkit-transform: translate(20px, 20px); 
-    transform: translate(20px, 20px);
+  &:first-child {
+    border-right: 2px solid $green;
+    grid-row: 1 / span 2;
+    padding-top: 208px;
   }
 }
 
@@ -53,10 +36,10 @@
 }
 
 .release-tech {
-  font-weight: bold;
   font-size: $text-medium;
-  text-align: center;
+  font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .txt-tech {
@@ -76,10 +59,10 @@
 }
 
 .release-tech {
-  font-weight: bold;
   font-size: $text-medium;
-  text-align: center;
+  font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .txt-tech {
