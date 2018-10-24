@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import style from '../board/style.scss';
-import Square from '~square';
+import Square from '@square';
 
-   class Board extends React.Component {
+   class Board extends Component {
+
+    state = {
+      squares : Array(9).fill(null),
+    }
+
     renderSquare(i) {
-      return <Square />;
+      return <Square value={this.state.squares[i]}/>;
     }
     
     render() {
