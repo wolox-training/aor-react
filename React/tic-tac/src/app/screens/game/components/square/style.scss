@@ -1,7 +1,7 @@
 /* scss square */
 .square {
   background: #FFF;
-  border: 1px solid #999;
+  border: 1px solid #333;
   color: pink;
   float: left;
   font-size: 24px;
@@ -19,6 +19,7 @@
 .square:focus {
   outline: none;
 }
+
 
 .container {
   margin: 0 auto;
