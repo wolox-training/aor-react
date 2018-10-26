@@ -6,28 +6,15 @@ Maquetado/*.css.map
 Maquetado/*.sass.map
 Maquetado/*.scss.map
 Maquetado/*.css
-<<<<<<< HEAD
-*.css
-.sass-cache
-application.css
-=======
 Maquetado/**/*.sass.map
 Maquetado/**/*.scss.map
 Maquetado/**/*.css
 Maquetado/**/*.css.map
->>>>>>> master
 
 ## System ##
 .DS_Store
 .vscode
-<<<<<<< HEAD
-.idea
-React/*.vscode
-React/tic-tac/node_modules
-React/tic-tac/.vscode
-=======
 Maquetado/scss/application.css
 READ.md
 application.css
 .idea/workspace.xml
->>>>>>> master

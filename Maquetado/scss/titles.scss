@@ -1,42 +1,11 @@
-<<<<<<< HEAD
-$blue: #00ADEE;
-$grey: #C4C4C4;
-$gray-dark: #333;
-$text-big: 24px;
-$text-medium: 16px;
-$text-small: 12px;
-$font-roboto: 'Roboto', sans-serif;
-$nav-height: 70px;
-$nav-logo-height: 30px;
-$title-decoration-height: 90px;
-$title-decoration-width: 70px;
-$tech-logo-size: 100px;
-
-=======
->>>>>>> master
 .title {
   align-items: center;
   background: url(assets/triangle.svg) no-repeat;
   color: $grey-dark;
   display: flex;
-<<<<<<< HEAD
-  height: 100px;
-  padding-left: 60px;
-}
-
-h2 {
-  color: $gray-dark;
-  font-size: $text-big;
-  font-family: $font-roboto; 
-}
-
-
- 
-=======
   font-family: $font-roboto;
   font-size: $text-big;
   height: 100px;
   margin: 40px 0 auto;
   padding-left: 60px;
 }
->>>>>>> master
