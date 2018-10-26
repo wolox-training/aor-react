@@ -5,7 +5,14 @@ Maquetado/*.css.map
 Maquetado/*.sass.map
 Maquetado/*.scss.map
 Maquetado/*.css
+*.css
+.sass-cache
+application.css
 
 ## System ##
 .DS_Store
 .vscode
+.idea
+React/*.vscode
+React/tic-tac/node_modules
+React/tic-tac/.vscode
