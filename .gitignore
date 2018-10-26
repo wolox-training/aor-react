@@ -15,6 +15,7 @@ Maquetado/**/*.css.map
 .DS_Store
 .vscode
 Maquetado/scss/application.css
+Maquetado/maquetado/application.css
 READ.md
 application.css
 .idea/workspace.xml
