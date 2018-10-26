@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $tech-logo-size: 100px;
 $green: #BED23C;
@@ -56,4 +57,102 @@ p{
     padding: 20px;
     text-align: center;
 
+=======
+.row {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.tech {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 25px;
+  position: relative;
+  width: 250px;
+
+  &:first-child {
+    border-right: 2px solid $green;
+    grid-row: 1 / span 2;
+    padding-top: 208px;
+  }
+}
+
+.img-tech {
+  height: $tech-logo-size;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.title-tech {
+  font-size: $text-big;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.release-tech {
+  font-size: $text-medium;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.txt-tech {
+  text-align: center;
+}
+
+.img-tech {
+  height: $tech-logo-size;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.title-tech {
+  font-size: $text-big;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.release-tech {
+  font-size: $text-medium;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.txt-tech {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .tech:first-child {
+    border-right: initial;
+    grid-row: initial;
+    padding-top: initial;
+  }
+
+  .tech {
+    border-bottom: 2px solid $green;
+    margin: 0 auto 40px;
+    width: 60%;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .row {
+    grid-template-columns: initial;
+  }
+
+  .content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+>>>>>>> master
 }

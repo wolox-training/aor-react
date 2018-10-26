@@ -1,0 +1,39 @@
+.footer {
+  align-items: center;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px 15px;
+
+  .text-footer {
+    color: $white-snow;
+    font-family: $font-roboto;
+    font-size: $text-big;
+    text-transform: uppercase;
+  }
+
+  .copy {
+    align-self: flex-end;
+    color: $white-snow;
+    font-size: $text-small;
+  }
+
+  .img-logo {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 35px 10px 10px;
+
+    .text-footer {
+      font-size: $text-small;
+    }
+
+    .img-logo {
+      margin: 10px;
+      width: 285px;
+    }
+  }
+}
