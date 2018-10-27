@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/index.scss';
-import registerServiceWorker from './registerServiceWorker';
 
-import App from '@components/App'; // eslint-disable-line import/first
+import Header from '@components/header'; // eslint-disable-line import/first
 import Game from '@screens/game/';
 
-ReactDOM.render(<App />, document.getElementById('header'));
-registerServiceWorker(); 
-
-
-ReactDOM.render(<Game />, document.getElementById('root'));
-registerServiceWorker();    
-
+ReactDOM.render(
+    <React.Fragment>
+    <Header/>
+    <Game/>
+    </React.Fragment>, document.getElementById('root'));
+    
