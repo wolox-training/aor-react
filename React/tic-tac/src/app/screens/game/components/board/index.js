@@ -3,40 +3,44 @@ import style from '../board/style.scss';
 import Square from '@square';
 
 class Board extends Component {
-  
+    
+  handleOnClickBoard = i => {
+    this.props.onClick(i);
+  }
+    
   renderSquare(i) {
     return( 
-      <Square value={this.props.squares[i]} 
-      onClick={() => 
-        this.props.onClick(i)} 
-        />
-        );
-      }
+      <Square 
+        value={this.props.squares[i]} 
+        onClick={this.handleOnClickBoard}
+        element={i}
+      />
+      );
+    }
       
-      render() {
-        
-        return (
-          <React.Fragment>
-          <div className={style.status}>{status}</div>
-          <div className={style.row}>
+  render() {
+    return (
+      <React.Fragment>
+        <div className={style.status}>{status}</div>
+        <div className={style.row}>
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
-          </div>
-          <div className={style.row}>
+        </div>
+        <div className={style.row}>
           {this.renderSquare(3)}
           {this.renderSquare(4)}
           {this.renderSquare(5)}
-          </div>
-          <div className={style.row}>
+        </div>
+        <div className={style.row}>
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
-          </div>
-          </React.Fragment>
-          );
-        }
-      }
-          
-      export default Board;
-      
+        </div>
+      </React.Fragment>
+    );
+  }
+}
+    
+export default Board;
+    
