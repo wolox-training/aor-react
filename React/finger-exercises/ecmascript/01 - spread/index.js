@@ -1,44 +1,33 @@
-import { isArray } from "./utils";
+import isArray from './utils';
 
 export function min(...args) {
-  if (args.length == 0) {
+  if (args.length === 0) {
     return undefined;
   }
 
   if (isArray(...args)) {
-    var num = Math.min(...args[0]);
-    return num;
+    return Math.min(...args[0]);
   }
 
   return Math.min(...args);
 }
 
 export function copy(args) {
-  var example = args;
+  const example = args;
 
   if (isArray(example)) {
-    var copieExample = [...example];
-    return [...example], copieExample;
+    const copieExample = [...example];
+    return copieExample;
   }
 
   return { ...args };
 }
 
-export function reverseMerge(...args) {
-  let final = [];
-  args.forEach(arg => {
-    final.unshift(...arg);
-  });
-
-  return final;
+export function reverseMerge(arg1, arg2) {
+  const test = [...arg2, ...arg1];
+  return test;
 }
 
-export function filterAttribs(args) {
-  const ListaAIgnorar = ["a", "b"];
-  return Object.keys(args)
-    .filter(key => ListaAIgnorar.indexOf(key) < 0)
-    .reduce((final, key) => {
-      final[key] = args[key];
-      return final;
-    }, {});
+export function filterAttribs({ a, b, ...arg } = {}) {
+  return arg;
 }
