@@ -1,0 +1,45 @@
+
+.game {
+  margin: 0 auto;
+  width: 28%;
+}
+.gameBoard {
+  display: inline-block;
+  width: 50%;
+}
+
+
+.gameInfo {
+  color: #333;
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 18px;
+  vertical-align: top;
+  width: 40%;
+}
+
+.titulo {
+  font-weight: bold;
+}
+
+.gameInfo button {
+  background-color: #38474D;
+  border: 3px solid #333;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 5px 15px;
+  text-align: left;
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+  width: 100%;
+}
+
+
+.gameInfo button:hover {
+  background-color: #78BD43;
+}
