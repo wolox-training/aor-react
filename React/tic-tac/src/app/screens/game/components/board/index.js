@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import style from '../board/style.scss';
-import Square from '@square';
+import React, { Component } from "react";
+import style from "../board/style.scss";
+import Square from "@square";
+import PropTypes from "prop-types";
 
 class Board extends Component {
-    
   handleOnClickBoard = i => {
     this.props.onClick(i);
-  }
-    
+  };
+
   renderSquare(i) {
-    return( 
-      <Square 
-        value={this.props.squares[i]} 
+    return (
+      <Square
+        value={this.props.squares[i]}
         onClick={this.handleOnClickBoard}
         element={i}
       />
-      );
-    }
-      
+    );
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -41,6 +41,11 @@ class Board extends Component {
     );
   }
 }
-    
+
+Square.propTypes = {
+  value: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  element: PropTypes.number.isRequired
+};
+
 export default Board;
-    

@@ -1,14 +1,14 @@
-import React, { Component, Fragment } from 'react';
-import Header from '@components/Header';
-import Game from '@screens/game/';
+import React, { Component, Fragment } from "react";
+import Header from "@components/Header";
+import Game from "@screens/game/";
 
 class App extends Component {
   render() {
-    return(
+    return (
       <Fragment>
         <Header />
         <Game />
-      </Fragment> 
+      </Fragment>
     );
   }
 }
