@@ -1,3 +1,7 @@
+@import 'colors';
+@import 'fonts';
+@import 'backgrounds';
+
 .game {
   margin: 0 auto;
   width: 40%;
@@ -14,14 +18,14 @@
   }
 
   .title {
-    color: #82C153;
-    font-family: 'Pacifico', cursive;
+    color: $color-green;
+    font-family: $font-cursive;
     font-size: 30px;
     font-weight: bold;
   }
   .showMove {
-    background-color: #38474D;
-    border: 3px solid #333;
+    background-color: $bg-gray-dark;
+    border: 3px solid $color-gray;
     color: #FFF;
     cursor: pointer;
     display: block;
@@ -36,7 +40,7 @@
     width: 100%;
 
     &:hover {
-      background-color: #78BD43;
+      background-color: $bg-green;
     }
   }
 }

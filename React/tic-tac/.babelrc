@@ -7,7 +7,7 @@
         "root": ["./src"],
         "alias": {
           "@components": "./src/app/components",
-          "@Screens": "./src/app/Screens",
+          "@screens": "./src/app/screens",
           "@redux": "./src/redux",
           "@assets": "./src/assets",
           "@utils": "./src/utils"

@@ -1,10 +1,13 @@
+@import 'colors';
+@import 'backgrounds';
+@import 'fonts';
 /* scss square */
 .square {
-  background: #FFF;
-  border: 1px solid #333;
-  color: #E6192A;
+  background: $bg-white;
+  border: 1px solid $color-gray;
+  color: $color-red;
   float: left;
-  font-family: 'Pacifico', cursive;
+  font-family: $font-cursive;
   font-size: 24px;
   font-weight: bold;
   height: 70px;

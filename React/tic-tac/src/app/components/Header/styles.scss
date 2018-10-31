@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import 'backgrounds';
+@import 'colors';
+@import 'fonts';
 
 body {
   margin: 0;
@@ -10,15 +12,15 @@ body {
 }
 
 .app-header {
-  background-color: #EEE;
+  background-color: $bg-gray-light;
   height: auto;
   padding: 20px;
   text-align: center;
 }
 
 .app-title {
-  color: #333;
-  font-family: 'Pacifico', cursive;
+  color: $color-gray;
+  font-family: $font-cursive;
   font-size: 35px;
 }
 
