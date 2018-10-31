@@ -20,7 +20,7 @@ class Square extends Component {
 Square.propTypes = {
   onClick: PropTypes.func,
   element: PropTypes.number,
-  value: PropTypes.number
+  value: PropTypes.string
 };
 
 export default Square;
