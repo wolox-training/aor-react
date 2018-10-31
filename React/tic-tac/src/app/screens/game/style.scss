@@ -23,24 +23,25 @@
     font-size: 30px;
     font-weight: bold;
   }
-  .showMove {
-    background-color: $bg-gray-dark;
-    border: 3px solid $color-gray;
-    color: #FFF;
-    cursor: pointer;
-    display: block;
-    font-weight: bold;
-    margin: 5px 0;
-    padding: 5px 15px;
-    text-align: left;
-    -webkit-transition-duration: 700ms;
-    -moz-transition-duration: 700ms;
-    -o-transition-duration: 700ms;
-    transition-duration: 700ms;
-    width: 100%;
+}
 
-    &:hover {
-      background-color: $bg-green;
-    }
+.showMove {
+  background-color: $bg-gray-dark;
+  border: 3px solid $color-gray;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 5px 15px;
+  text-align: left;
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+  width: 100%;
+
+  &:hover {
+    background-color: $bg-green;
   }
 }
