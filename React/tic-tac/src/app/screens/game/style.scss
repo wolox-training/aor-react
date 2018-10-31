@@ -1,18 +1,10 @@
 .game {
   margin: 0 auto;
-  width: 28%;
+  width: 40%;
 }
 
-.gameBoard {
+.view {
   display: inline-block;
-  width: 50%;
-}
-
-.gameInfo {
-  color: #333;
-  display: inline-block;
-  padding-left: 20px;
-  padding-top: 18px;
   vertical-align: top;
   width: 45%;
 
@@ -21,7 +13,13 @@
     padding: 0;
   }
 
-  .square {
+  .title {
+    color: #82C153;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .showMove {
     background-color: #38474D;
     border: 3px solid #333;
     color: #FFF;
@@ -41,11 +39,4 @@
       background-color: #78BD43;
     }
   }
-}
-
-.title {
-  color: #82C153;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
-  font-weight: bold;
 }

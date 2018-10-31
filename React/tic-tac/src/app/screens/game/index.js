@@ -40,7 +40,7 @@ class Game extends Component {
     const desc = `${move ? `Go to move #${move}` : 'Go to game start'}`;
     return (
       <li key={move}>
-        <button className={style.square} onClick={() => this.jumpTo(move)}>
+        <button className={style.showMove} onClick={() => this.jumpTo(move)}>
           {desc}
         </button>
       </li>
@@ -62,10 +62,10 @@ class Game extends Component {
 
     return (
       <div className={style.game}>
-        <div className={style.gameBoard}>
+        <div className={style.view}>
           <Board squares={current.squares} onClick={i => this.handleClick(i)} />
         </div>
-        <div className={style.gameInfo}>
+        <div className={style.view}>
           <div className={style.title}>{status}</div>
           <ol className={style.listMove}>{moves}</ol>
         </div>
