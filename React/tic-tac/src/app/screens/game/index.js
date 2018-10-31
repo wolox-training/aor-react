@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import calculateWinner from '@utils/gameUtils';
 
 import style from './style.scss';
-import Board from './components/board';
+import Board from './components/Board';
 
 class Game extends Component {
   state = {
@@ -40,7 +40,9 @@ class Game extends Component {
     const desc = `${move ? `Go to move #${move}` : 'Go to game start'}`;
     return (
       <li key={move}>
-        <button onClick={() => this.jumpTo(move)}>{desc}</button>
+        <button className={style.square} onClick={() => this.jumpTo(move)}>
+          {desc}
+        </button>
       </li>
     );
   };
@@ -64,8 +66,8 @@ class Game extends Component {
           <Board squares={current.squares} onClick={i => this.handleClick(i)} />
         </div>
         <div className={style.gameInfo}>
-          <div className={style.titulo}>{status}</div>
-          <ol>{moves}</ol>
+          <div className={style.title}>{status}</div>
+          <ol className={style.listMove}>{moves}</ol>
         </div>
       </div>
     );

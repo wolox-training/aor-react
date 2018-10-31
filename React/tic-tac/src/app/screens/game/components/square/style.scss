@@ -2,8 +2,9 @@
 .square {
   background: #FFF;
   border: 1px solid #333;
-  color: pink;
+  color: #E6192A;
   float: left;
+  font-family: 'Pacifico', cursive;
   font-size: 24px;
   font-weight: bold;
   height: 70px;
@@ -13,10 +14,10 @@
   padding: 0;
   text-align: center;
   width: 70px;
-}
 
-.square:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .container {

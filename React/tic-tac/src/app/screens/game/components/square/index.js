@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import style from '../square/style.scss';
+import style from './style.scss';
 
 class Square extends Component {
   handleClick = () => {

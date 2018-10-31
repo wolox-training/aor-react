@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Square from '../square/index.js';
-import style from '../board/style.scss';
+import Square from '../Square/index.js';
+
+import style from './style.scss';
 
 class Board extends Component {
   handleOnClickBoard = i => {
@@ -38,7 +39,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  onClick: PropTypes.number,
+  onClick: PropTypes.func,
   squares: PropTypes.number
 };
 

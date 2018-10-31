@@ -1,50 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 body {
   margin: 0;
 }
 
-.app {
-  text-align: center;
-}
-
 .app-logo {
   animation: app-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .app-header {
   background-color: #EEE;
-  color: #333;
-  height: 150px;
+  height: auto;
   padding: 20px;
   text-align: center;
 }
 
 .app-title {
-  font-size: 1.5em;
+  color: #333;
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
 }
-
-.app-intro {
-  font-size: large;
-}
-
-ol,
-ul {
-  padding-left: 30px;
-}
-
-.kbd-navigation .square:focus {
-  background: #DDD;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.gameInfo {
-  margin-left: 20px;
-}
-
 
 @keyframes app-logo-spin {
   from {
