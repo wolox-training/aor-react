@@ -12,9 +12,9 @@ export function min(...args) {
   return Math.min(...args);
 }
 
-export function copy(args, ...copieExample) {
+export function copy(args) {
   if (isArray(args)) {
-    return copieExample;
+    return [...args];
   }
   return { ...args };
 }
