@@ -12,20 +12,15 @@ export function min(...args) {
   return Math.min(...args);
 }
 
-export function copy(args) {
-  const example = args;
-
-  if (isArray(example)) {
-    const copieExample = [...example];
+export function copy(args, ...copieExample) {
+  if (isArray(args)) {
     return copieExample;
   }
-
   return { ...args };
 }
 
 export function reverseMerge(arg1, arg2) {
-  const test = [...arg2, ...arg1];
-  return test;
+  return [...arg2, ...arg1];
 }
 
 export function filterAttribs({ a, b, ...arg } = {}) {
