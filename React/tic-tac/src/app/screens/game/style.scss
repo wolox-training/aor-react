@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'fonts';
+@import 'backgrounds';
+
+.game {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.view {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+
+  .listMove {
+    font-weight: bold;
+    padding: 0;
+  }
+
+  .title {
+    color: $color-green;
+    font-family: $font-cursive;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.showMove {
+  background-color: $bg-gray-dark;
+  border: 3px solid $color-gray;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 5px 15px;
+  text-align: left;
+  transition-duration: 700ms;
+  width: 100%;
+
+  &:hover {
+    background-color: $bg-green;
+  }
+}
