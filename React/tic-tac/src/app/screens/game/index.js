@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import calculateWinner from '@utils/gameUtils';
 
-import style from './style.scss';
+import Header from '../../../app/components/Header';
+
 import Board from './components/Board';
+import style from './style.scss';
 
 class Game extends Component {
   state = {
@@ -61,15 +63,19 @@ class Game extends Component {
     }
 
     return (
-      <div className={style.game}>
-        <div className={style.view}>
-          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+      <Fragment>
+        <Header />
+
+        <div className={style.game}>
+          <div className={style.view}>
+            <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+          </div>
+          <div className={style.view}>
+            <div className={style.title}>{status}</div>
+            <ol className={style.listMove}>{moves}</ol>
+          </div>
         </div>
-        <div className={style.view}>
-          <div className={style.title}>{status}</div>
-          <ol className={style.listMove}>{moves}</ol>
-        </div>
-      </div>
+      </Fragment>
     );
   }
 }
