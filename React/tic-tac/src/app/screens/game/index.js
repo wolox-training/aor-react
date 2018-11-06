@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import calculateWinner from '@utils/gameUtils';
-
-import Header from '../../../app/components/Header';
+import Header from '@components/Header';
 
 import Board from './components/Board';
 import style from './style.scss';

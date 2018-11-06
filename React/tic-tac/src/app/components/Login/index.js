@@ -19,7 +19,6 @@ class Login extends Component {
           <div className={`${style.login} ${style.fadeInDown} ${style.animated}`}>
             <input className={style.space} type="text" id="email" placeholder="E-mail" />
             <input className={style.space} type="password" id="password" placeholder="Password" />
-
             <input
               className={style.space}
               type="submit"
