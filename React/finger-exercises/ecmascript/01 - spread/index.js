@@ -13,19 +13,14 @@ export function min(...args) {
 }
 
 export function copy(args) {
-  const example = args;
-
-  if (isArray(example)) {
-    const copieExample = [...example];
-    return copieExample;
+  if (isArray(args)) {
+    return [...args];
   }
-
   return { ...args };
 }
 
 export function reverseMerge(arg1, arg2) {
-  const test = [...arg2, ...arg1];
-  return test;
+  return [...arg2, ...arg1];
 }
 
 export function filterAttribs({ a, b, ...arg } = {}) {
