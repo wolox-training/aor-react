@@ -1,21 +1,14 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Game from '@screens/Game';
-import LoginForm from '@screens/Login';
 
-const Location = [
-  { path: '/', component: LoginForm, key: 1, exact: true },
-  { path: '/game', component: Game, key: 2 }
-];
+import way from './path';
+
+const showWay = () => way.map(route => <Route key={route.key} {...route} />);
 
 const Routes = () => (
   <Router>
     <Fragment>
-      <Switch>
-        {Location.map(route => (
-          <Route key={route.key} {...route} />
-        ))}
-      </Switch>
+      <Switch>{showWay()}</Switch>
     </Fragment>
   </Router>
 );

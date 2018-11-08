@@ -64,7 +64,6 @@ class Game extends Component {
     return (
       <Fragment>
         <Header />
-
         <div className={style.game}>
           <div className={style.view}>
             <Board squares={current.squares} onClick={i => this.handleClick(i)} />
