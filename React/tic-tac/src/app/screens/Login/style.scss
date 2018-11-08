@@ -30,7 +30,7 @@
     }
   }
 
-  input#submit {
+  .submit {
     background-color: #0476DF;
     border: none;
     box-shadow: 2px 2px 0 #023B70;
@@ -51,7 +51,7 @@
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
 }

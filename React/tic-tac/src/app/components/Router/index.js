@@ -1,19 +1,23 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Game from '@screens/Game';
+import LoginForm from '@screens/Login';
 
-import Login from '../Login';
+const Location = [
+  { path: '/', component: LoginForm, key: 1, exact: true },
+  { path: '/game', component: Game, key: 2 }
+];
 
-const Rout = () => (
+const Routes = () => (
   <Router>
     <Fragment>
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/game" component={Game} />
-        {/* <Redirect from="/" to="/game" /> */}
+        {Location.map(route => (
+          <Route key={route.key} {...route} />
+        ))}
       </Switch>
     </Fragment>
   </Router>
 );
 
-export default Rout;
+export default Routes;
