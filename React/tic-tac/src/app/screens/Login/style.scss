@@ -5,10 +5,10 @@
   left: -15px;
   margin: 0 auto;
   padding: 4em;
-  position: absolute;
+  position: fixed;
   right: -15px;
   top: 200px;
-  width: 23%;
+  width: 30%;
 
   .space {
     background-color: #FFF;
@@ -30,6 +30,13 @@
     }
   }
 
+  .alert {
+    background-color: pink;
+    border: 2px solid #CCC;
+    display: block;
+    font-size: 12px;
+  }
+
   .submit {
     background-color: #0476DF;
     border: none;
@@ -46,6 +53,10 @@
       background-color: #023B70;
     }
   }
+}
+
+.field {
+  display: block;
 }
 
 .overlay {
