@@ -9,8 +9,6 @@ import Form from './components/Form';
 
 class Login extends Component {
   handleSubmit({ email, password }) {
-    alert('Submit');
-
     this.props.login(email, password);
   }
 

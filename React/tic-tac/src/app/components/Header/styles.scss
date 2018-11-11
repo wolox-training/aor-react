@@ -32,3 +32,19 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.button {
+  background-color: $bg-green;
+  border: 0;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
