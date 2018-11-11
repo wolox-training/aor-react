@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import logo from '@assets/logo.svg';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { LogOut } from '../../../redux/auth/actions';
 
 import style from './styles.scss';
 
 class Header extends Component {
-  out() {
+  handleLogOut() {
     this.props.logOut();
   }
 
@@ -17,7 +18,7 @@ class Header extends Component {
       <header className={style.appHeader}>
         <img src={logo} className={style.appLogo} alt="logo" />
         <h1 className={style.appTitle}>Tic Tac Toe</h1>
-        <button type="submit" className={style.button} onClick={() => this.out()}>
+        <button type="submit" className={style.button} onClick={() => this.handleLogOut()}>
           LogOut
         </button>
       </header>
@@ -27,6 +28,11 @@ class Header extends Component {
     return status;
   }
 }
+
+Header.propTypes = {
+  logOut: PropTypes.func,
+  loggedIn: PropTypes.bool
+};
 
 const MapStateToProps = state => ({
   loggedIn: state.auth
