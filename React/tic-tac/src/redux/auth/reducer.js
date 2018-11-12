@@ -1,7 +1,7 @@
 function reducerAuth(state = false, action) {
   switch (action.type) {
     case 'LogIn':
-      return true;
+      return action.loggedIn;
     case 'LogOut':
       return false;
 
