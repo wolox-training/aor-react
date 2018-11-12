@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { LogIn } from '../../../redux/auth/actions';
@@ -14,15 +13,11 @@ class Login extends Component {
   }
 
   render() {
-    const status = this.props.loggedIn ? (
-      <Redirect to="/game" />
-    ) : (
+    return (
       <div className={style.overlay}>
         <Form onSubmit={values => this.handleSubmit(values)} />
       </div>
     );
-
-    return status;
   }
 }
 
@@ -35,8 +30,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Login.propTypes = {
-  login: PropTypes.func,
-  loggedIn: PropTypes.bool
+  login: PropTypes.func
 };
 
 export default connect(
