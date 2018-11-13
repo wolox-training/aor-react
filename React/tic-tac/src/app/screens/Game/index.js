@@ -13,7 +13,7 @@ class Game extends Component {
     xIsNext: true
   };
 
-  handleClick(i) {
+  handleClick = i => {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -29,7 +29,7 @@ class Game extends Component {
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext
     });
-  }
+  };
 
   jumpTo(step) {
     this.setState({
@@ -68,7 +68,7 @@ class Game extends Component {
         <Header />
         <div className={style.game}>
           <div className={style.view}>
-            <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+            <Board squares={current.squares} onClick={this.handleClick} />
           </div>
           <div className={style.view}>
             <div className={style.title}>{status}</div>

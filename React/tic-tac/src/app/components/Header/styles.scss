@@ -13,15 +13,30 @@ body {
 
 .app-header {
   background-color: $bg-gray-light;
+  display: flex;
+  flex: wrap;
   height: auto;
   padding: 20px;
   text-align: center;
+}
+
+.child {
+  min-width: 23em;
+}
+
+.childfeatured {
+  flex-basis: 80%;
 }
 
 .app-title {
   color: $color-gray;
   font-family: $font-cursive;
   font-size: 35px;
+}
+
+.alignright {
+  justify-content: flex-end;
+  text-align: right;
 }
 
 @keyframes app-logo-spin {
@@ -44,7 +59,10 @@ body {
   font-weight: bold;
   margin: 15px;
   padding: 10px;
-  position: absolute;
-  right: 0;
-  top: 0;
+}
+
+.menu {
+  li {
+    display: inline-flex;
+  }
 }
