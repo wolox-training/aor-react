@@ -16,9 +16,9 @@ const persistState = loadState();
 const store = createStore(rootStore, persistState, applyMiddleware(thunk));
 
 store.subscribe(() => {
-  console.log(store.getState());
   saveState({
     auth: store.getState().auth
   });
 });
+
 export default store;

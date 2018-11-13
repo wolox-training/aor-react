@@ -1,8 +1,21 @@
-import { create } from 'apisauce';
+import UserService from '@config/api';
+import LogInTrue from '@redux/auth/actions';
 
-const api = create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
-  timeout: 5000
-});
-
-export default api;
+export function LogIn(payload) {
+  return dispatch => {
+    UserService.post('/Users/login', {
+      email: payload.email,
+      password: payload.password
+    })
+      .then(response => {
+        if (response.ok) {
+          dispatch(LogInTrue(true));
+        } else {
+          throw new Error();
+        }
+      })
+      .catch(() => {
+        alert('Error al iniciar sesión');
+      });
+  };
+}
