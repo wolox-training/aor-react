@@ -5,12 +5,8 @@ import Square from './components/Square';
 import style from './style.scss';
 
 class Board extends Component {
-  handleOnClickBoard = i => {
-    this.props.onClick(i);
-  };
-
   renderSquare(i) {
-    return <Square value={this.props.squares[i]} onClick={this.handleOnClickBoard} element={i} />;
+    return <Square value={this.props.squares[i]} onClick={this.props.onClick} element={i} />;
   }
 
   render() {

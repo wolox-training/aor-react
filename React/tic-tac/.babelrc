@@ -11,7 +11,8 @@
           "@redux": "./src/redux",
           "@assets": "./src/assets",
           "@utils": "./src/utils",
-          "@config": "./src/config"
+          "@config": "./src/config",
+          "@services": "./src/services"
         }
       }
     ]

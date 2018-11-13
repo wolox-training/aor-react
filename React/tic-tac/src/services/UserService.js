@@ -1,7 +1,7 @@
 import UserService from '@config/api';
 import LogInTrue from '@redux/auth/actions';
 
-export function LogIn(payload) {
+function LogIn(payload) {
   return dispatch => {
     UserService.post('/Users/login', {
       email: payload.email,
@@ -15,7 +15,10 @@ export function LogIn(payload) {
         }
       })
       .catch(() => {
-        alert('Error al iniciar sesión');
+        // eslint-disable-next-line
+        alert("Error al iniciar sesión");
       });
   };
 }
+
+export default LogIn;
