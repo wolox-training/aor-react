@@ -1,5 +1,6 @@
 import LoginForm from '@screens/Login';
 import Game from '@screens/Game';
+import notFound from '@screens/NotFound/notFound';
 
 const way = [
   {
@@ -15,6 +16,9 @@ const way = [
     key: 2,
     exact: false,
     protected: true
+  },
+  {
+    renderComponent: notFound
   }
 ];
 
