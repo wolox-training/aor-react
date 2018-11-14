@@ -2,20 +2,12 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 
-import validate from '../validate.js';
-import style from '../style.scss';
+import validate from '../validate';
 
-const renderField = ({ input, label, className, type, meta: { touched, error } }) => (
-  <div className={style.field}>
-    <label htmlFor="{label}">{label}</label>
-    <div>
-      <input {...input} placeholder={label} type={type} className={className} />
-      {touched && (error && <span className={style.alert}>{error}</span>)}
-    </div>
-  </div>
-);
+import style from './styles.scss';
+import renderField from './formField/index';
 
-const SyncValidationForm = props => {
+const loginForm = props => {
   const { handleSubmit, onSubmit, submitting, onClick } = props;
 
   return (
@@ -23,19 +15,19 @@ const SyncValidationForm = props => {
       onSubmit={handleSubmit(onSubmit)}
       className={`${style.login} ${style.fadeInDown} ${style.animated}`}
     >
-      <Field name="email" type="email" component={renderField} label="Email" className={style.space} />
+      <Field name="email" type="email" component={renderField} label="Email" className={style.inputField} />
       <Field
         name="password"
         type="password"
         component={renderField}
         label="Password"
-        className={style.space}
+        className={style.inputField}
       />
       <div>
         <button
           type="submit"
           disabled={submitting}
-          className={`${style.space} ${style.submit}`}
+          className={`${style.inputField} ${style.submit}`}
           onClick={onClick}
         >
           Submit
@@ -45,7 +37,7 @@ const SyncValidationForm = props => {
   );
 };
 
-SyncValidationForm.propTypes = {
+loginForm.propTypes = {
   handleSubmit: PropTypes.func,
   onSubmit: PropTypes.func.isRequired,
   submitting: PropTypes.bool,
@@ -55,4 +47,4 @@ SyncValidationForm.propTypes = {
 export default reduxForm({
   form: 'syncValidation',
   validate
-})(SyncValidationForm);
+})(loginForm);

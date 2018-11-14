@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import way from './path';
+import routes from './path';
 
-const showWay = loggedIn =>
-  way.map(route => {
+const parseRoutes = loggedIn =>
+  routes.map(route => {
     let status;
     if (route.protected && !loggedIn) {
       status = <Redirect to="/" />;
@@ -21,7 +21,7 @@ const showWay = loggedIn =>
 const Routes = props => (
   <Router>
     <Fragment>
-      <Switch>{showWay(props.loggedIn)}</Switch>
+      <Switch>{parseRoutes(props.loggedIn)}</Switch>
     </Fragment>
   </Router>
 );
