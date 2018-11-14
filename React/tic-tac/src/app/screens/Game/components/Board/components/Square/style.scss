@@ -4,22 +4,28 @@
 /* scss square */
 .square {
   background: $bg-white;
-  border: 1px solid $color-gray;
-  color: $color-red;
-  float: left;
+  border: 3px double #333;
+  border-radius: 0 25px 0 25px;
+  display: inline-flex;
+  // float: left;
   font-family: $font-cursive;
   font-size: 24px;
   font-weight: bold;
-  height: 70px;
+  height: 80px;
+  justify-content: center;
   line-height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  margin: 5px;
   padding: 0;
   text-align: center;
-  width: 70px;
+  vertical-align: top;
+  width: 80px;
 
   &:focus {
     outline: none;
+  }
+
+  &:nth-child(2n) {
+    color: $color-red;
   }
 }
 

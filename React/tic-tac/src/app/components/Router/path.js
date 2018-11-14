@@ -18,7 +18,8 @@ const way = [
     protected: true
   },
   {
-    renderComponent: notFound
+    renderComponent: notFound,
+    key: 3
   }
 ];
 

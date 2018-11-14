@@ -30,8 +30,8 @@ Routes.propTypes = {
   loggedIn: PropTypes.bool
 };
 
-const MapStateToProps = state => ({
+const mapStateToProps = state => ({
   loggedIn: state.auth
 });
 
-export default connect(MapStateToProps)(Routes);
+export default connect(mapStateToProps)(Routes);

@@ -67,7 +67,7 @@ class Game extends Component {
       <Fragment>
         <Header />
         <div className={style.game}>
-          <div className={style.view}>
+          <div className={`${style.view} ${style.viewFeatured}`}>
             <Board squares={current.squares} onClick={this.handleClick} />
           </div>
           <div className={style.view}>

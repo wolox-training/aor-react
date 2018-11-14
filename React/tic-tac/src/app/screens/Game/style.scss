@@ -7,16 +7,21 @@ body {
 }
 
 .game {
+  display: flex;
   margin: 0 auto;
-  width: 40%;
+  width: 60%;
+}
+
+.viewFeatured {
+  flex-basis: 40%;
 }
 
 .view {
-  display: inline-block;
   vertical-align: top;
-  width: 45%;
+  width: 60%;
 
   .listMove {
+    display: block;
     font-weight: bold;
     padding: 0;
   }
@@ -27,6 +32,11 @@ body {
     font-size: 30px;
     font-weight: bold;
   }
+}
+
+.row {
+  display: inline-block;
+  width: 10%;
 }
 
 .showMove {
@@ -71,5 +81,30 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .game {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .view,
+  .viewFeatured {
+    display: block;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .game {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .row {
+    text-align: center;
   }
 }

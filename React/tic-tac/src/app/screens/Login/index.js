@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import LogIn from '@services/UserService';
+import action from '@redux/auth/actions';
 
 import style from './style.scss';
 import Form from './components/Form';
@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  login: (email, password) => dispatch(LogIn({ email, password }))
+  login: (email, password) => dispatch(action.logIn({ email, password }))
 });
 
 Login.propTypes = {

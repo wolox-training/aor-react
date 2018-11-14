@@ -1,8 +1,10 @@
+import actions from '@redux/auth/actions';
+
 function reducerAuth(state = false, action) {
   switch (action.type) {
-    case 'LogIn':
+    case actions.logInTrue().type:
       return action.loggedIn;
-    case 'LogOut':
+    case actions.logOut().type:
       return false;
 
     default:

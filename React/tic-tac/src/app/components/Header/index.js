@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '@assets/logo.svg';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { LogOut } from '@redux/auth/actions';
+import actions from '@redux/auth/actions';
 
 import style from './styles.scss';
 
@@ -38,7 +38,7 @@ const MapStateToProps = state => ({
 });
 
 const MapDispatchToProps = dispatch => ({
-  logOut: () => dispatch(LogOut())
+  logOut: () => dispatch(actions.logOut())
 });
 
 export default connect(
