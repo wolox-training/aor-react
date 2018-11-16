@@ -1,33 +1,22 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React from 'react';
+import { Switch } from 'react-router-dom';
+import { ConnectedRouter } from 'connected-react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { history } from '@redux/store';
 
-import routes from './path';
-
-const parseRoutes = loggedIn =>
-  routes.map(route => {
-    let status;
-    if (route.protected && !loggedIn) {
-      status = <Redirect to="/" />;
-    } else if (!route.protected && loggedIn) {
-      status = <Redirect to="/Game" />;
-    } else {
-      status = <route.renderComponent />;
-    }
-    return <Route key={route.key} render={() => status} {...route} />;
-  });
+import parseRoutes from './parseRoutes';
 
 const Routes = props => (
-  <Router>
-    <Fragment>
-      <Switch>{parseRoutes(props.loggedIn)}</Switch>
-    </Fragment>
-  </Router>
+  <ConnectedRouter history={history}>
+    <Switch>{parseRoutes(props)}</Switch>
+  </ConnectedRouter>
 );
 
 Routes.propTypes = {
-  loggedIn: PropTypes.bool
+  props: PropTypes.shape({
+    loggedIn: PropTypes.bool.isRequired
+  })
 };
 
 const mapStateToProps = state => ({

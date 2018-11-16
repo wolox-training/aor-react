@@ -13,8 +13,8 @@
 }
 
 .view {
+  flex: 200px;
   vertical-align: top;
-  width: 60%;
 
   .listMove {
     display: block;
@@ -28,11 +28,6 @@
     font-size: 30px;
     font-weight: bold;
   }
-}
-
-.row {
-  display: inline-block;
-  width: 10%;
 }
 
 .showMove {

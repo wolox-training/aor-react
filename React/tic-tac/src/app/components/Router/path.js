@@ -2,7 +2,7 @@ import LoginForm from '@screens/Login';
 import Game from '@screens/Game';
 import notFound from '@screens/NotFound/notFound';
 
-const way = [
+const routes = [
   {
     path: '/',
     renderComponent: LoginForm,
@@ -19,8 +19,9 @@ const way = [
   },
   {
     renderComponent: notFound,
-    key: 3
+    key: 3,
+    protected: true
   }
 ];
 
-export default way;
+export default routes;

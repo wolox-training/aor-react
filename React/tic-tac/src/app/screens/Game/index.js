@@ -6,7 +6,6 @@ import Board from './components/Board';
 import style from './style.scss';
 
 class Game extends Component {
-  // eslint-disable-next-line
   state = {
     history: [{ squares: Array(9).fill(null) }],
     stepNumber: 0,
