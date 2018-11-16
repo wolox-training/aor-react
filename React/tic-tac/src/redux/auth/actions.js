@@ -1,8 +1,10 @@
 import Service from '@services/UserService';
 
+export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
+
 function logInTrue(payload) {
   return {
-    type: 'LOG_IN',
+    type: actions.LOGIN,
     loggedIn: payload
   };
 }
@@ -26,7 +28,7 @@ function logIn(payload) {
 
 function logOut() {
   return {
-    type: 'LOG_OUT'
+    type: actions.LOGOUT
   };
 }
 

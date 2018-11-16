@@ -26,8 +26,6 @@ const store = createStore(
 );
 /* eslint-enable */
 
-// const store = createStore(rootStore, persistState, applyMiddleware(thunk));
-
 store.subscribe(() => {
   saveState({
     auth: store.getState().auth
