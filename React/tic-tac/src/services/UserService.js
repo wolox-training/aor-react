@@ -1,7 +1,7 @@
-import UserService from '@config/api';
+import userService from '@config/api';
 
 function service(payload) {
-  return UserService.post('/Users/login', {
+  return userService.post('/Users/login', {
     email: payload.email,
     password: payload.password
   });

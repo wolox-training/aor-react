@@ -6,7 +6,6 @@ function reducerAuth(state = false, action) {
       return action.loggedIn;
     case actions.LOGOUT:
       return false;
-
     default:
       return state;
   }

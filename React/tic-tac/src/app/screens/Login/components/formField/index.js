@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from '../formField/style.scss';
+import style from './style.scss';
 
 const renderField = ({ input, label, className, type, meta: { touched, error } }) => (
   <div className={style.field}>

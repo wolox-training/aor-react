@@ -19,10 +19,7 @@ function logIn(payload) {
           throw new Error();
         }
       })
-      .catch(() => {
-        // eslint-disable-next-line
-        alert("Error al iniciar sesión");
-      });
+      .catch(() => {});
   };
 }
 
