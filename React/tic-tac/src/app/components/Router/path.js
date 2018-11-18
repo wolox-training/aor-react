@@ -1,7 +1,7 @@
 import LoginForm from '@screens/Login';
 import Game from '@screens/Game';
 import notFound from '@screens/NotFound/notFound';
-import Setting from '@screens/settings';
+import Setting from '@screens/Setting';
 
 const routes = [
   {

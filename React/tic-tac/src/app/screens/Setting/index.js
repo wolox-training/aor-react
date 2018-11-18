@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment,} from 'react';
+import Header from '@components/Header';
 
-import IconSelector from './ components/IconSelector';
+import IconSelector from './components/IconSelector';
 
 class Setting extends Component {
   render() {
-    return <IconSelector />;
+    return (
+      <Fragment>
+        <Header/>
+        <IconSelector/>
+      </Fragment>
+    );
   }
 }
 

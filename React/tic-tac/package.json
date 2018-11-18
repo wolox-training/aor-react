@@ -26,7 +26,8 @@
     "posttest": "npm run lint"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "csscomb": "^4.2.0",
+    "eslint": "^3.19.0",
     "eslint-config-loopback": "^8.0.0"
   },
   "repository": {

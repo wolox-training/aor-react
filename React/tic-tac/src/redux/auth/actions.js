@@ -19,7 +19,9 @@ function logIn(payload) {
           throw new Error();
         }
       })
-      .catch(() => {});
+      .catch(() => {
+
+      });
   };
 }
 

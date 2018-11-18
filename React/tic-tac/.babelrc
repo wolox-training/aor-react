@@ -13,7 +13,8 @@
           "@utils": "./src/utils",
           "@config": "./src/config",
           "@services": "./src/services",
-          "@login": "./src/screens/Login"
+          "@login": "./src/screens/Login",
+          "@header": "./src/Header"
         }
       }
     ]
