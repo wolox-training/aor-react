@@ -10,7 +10,8 @@
           "@screens": "./src/app/screens",
           "@redux": "./src/redux",
           "@assets": "./src/assets",
-          "@utils": "./src/utils"
+          "@utils": "./src/utils",
+          "@fortawesome": "./node_modules/@fortawesome"
         }
       }
     ]
