@@ -11,7 +11,9 @@
           "@redux": "./src/redux",
           "@assets": "./src/assets",
           "@utils": "./src/utils",
-          "@fortawesome": "./node_modules/@fortawesome"
+          "@config": "./src/config",
+          "@services": "./src/services",
+          "@login": "./src/screens/Login"
         }
       }
     ]
