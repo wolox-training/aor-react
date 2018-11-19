@@ -23,12 +23,19 @@
   }
 
   .title {
-    color: $color-green;
+    color: $color-dark-gray;
     font-family: $font-cursive;
     font-size: 30px;
-    font-weight: bold;
   }
 }
+
+.listMoveButton {
+  color: $color-medium-gray;
+  font-family: 'Pacifico', cursive;
+  font-size: $font-medium;
+  font-weight: normal;
+}
+
 
 .xPlayer {
   color: $color-red;
@@ -45,9 +52,11 @@
 .showMove {
   background-color: $bg-gray-dark;
   border: 3px solid $color-gray;
+  border-radius: 5px;
   color: #FFF;
   cursor: pointer;
   display: block;
+  font-size: $font-small;
   font-weight: bold;
   margin: 5px 0;
   padding: 5px 15px;
@@ -59,6 +68,7 @@
     background-color: $bg-green;
   }
 }
+
 
 @media screen and (max-width: 1200px) {
   .game {

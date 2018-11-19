@@ -11,11 +11,27 @@ body {
   height: 100px;
 }
 
+.link {
+  color: $color-gray;
+  color: #333;
+  font-family: 'Pacifico', cursive;
+  font-size: $font-medium;
+  padding: 10px;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-medium-gray;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+  }
+}
+
 .app-header {
   background-color: $bg-gray-light;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
   display: flex;
   flex: wrap;
   height: auto;
+  margin-bottom: 30px;
   padding: 20px;
   text-align: center;
 }

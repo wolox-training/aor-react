@@ -46,7 +46,7 @@ class Game extends Component {
   mapMove = (step, move) => {
     const desc = `${move ? `Go to move #${move}` : 'Go to game start'}`;
     return (
-      <li key={move}>
+      <li className={style.listMoveButton} key={move}>
         <button className={style.showMove} onClick={() => this.jumpTo(move)}>
           {desc}
         </button>

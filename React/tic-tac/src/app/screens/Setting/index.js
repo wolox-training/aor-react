@@ -3,6 +3,7 @@ import Header from '@components/Header';
 import actions from '@redux/setting/actions';
 import IconSelector from './ components/IconSelector';
 import { connect } from 'react-redux';
+import style from './style.scss';
 
 class Setting extends Component {
   handleSelect(icon, isPlayerOne) {
@@ -14,6 +15,7 @@ class Setting extends Component {
     return (
       <Fragment>
         <Header />
+        <div className={style.players}>
         <IconSelector
           selectedIcon={this.props.playerOne}
           onSelect={icon => this.handleSelect(icon, true)}
@@ -22,6 +24,7 @@ class Setting extends Component {
           selectedIcon={this.props.playerTwo}
           onSelect={icon => this.handleSelect(icon, false)}
         />
+        </div>
       </Fragment>
     );
   }

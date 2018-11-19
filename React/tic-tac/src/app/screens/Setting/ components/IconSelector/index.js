@@ -31,8 +31,8 @@ class IconSelector extends Component {
       <Fragment>
         <div className={style.player}>
           <h2 className={style.title}>
-            {title}:
-            <FontAwesomeIcon icon={this.props.selectedIcon} />
+            {title}: <span className={style.iconTitle}>
+            <FontAwesomeIcon icon={this.props.selectedIcon} /></span>
           </h2>
           <div className={style.icons}>
             {this.state.icons.map(el => (

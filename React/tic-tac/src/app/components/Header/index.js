@@ -18,8 +18,8 @@ class Header extends Component {
         </div>
         <div className={` ${style.child} ${style.alignright}`}>
           <ul className={style.menu}>
-          <li> <Link to='/game'>Game</Link></li>
-          <li> <Link to='/setting'>Setting</Link></li>
+          <li> <Link className={style.link} to='/game'>Game</Link></li>
+          <li> <Link className={style.link} to='/setting'>Setting</Link></li>
             <li>
               <button
                 type="submit"
