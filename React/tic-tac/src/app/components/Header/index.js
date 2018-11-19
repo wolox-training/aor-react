@@ -1,6 +1,7 @@
-import React, { Component, } from 'react';
+import React, { Component } from 'react';
 import logo from '@assets/logo.svg';
-import { connect, } from 'react-redux';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import actions from '@redux/auth/actions';
 
@@ -17,6 +18,8 @@ class Header extends Component {
         </div>
         <div className={` ${style.child} ${style.alignright}`}>
           <ul className={style.menu}>
+          <li> <Link to='/game'>Game</Link></li>
+          <li> <Link to='/setting'>Setting</Link></li>
             <li>
               <button
                 type="submit"
@@ -34,15 +37,15 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  logOut: PropTypes.func,
+  logOut: PropTypes.func
 };
 
 const MapStateToProps = state => ({
-  loggedIn: state.auth,
+  loggedIn: state.auth
 });
 
 const MapDispatchToProps = dispatch => ({
-  logOut: () => dispatch(actions.logOut()),
+  logOut: () => dispatch(actions.logOut())
 });
 
 export default connect(

@@ -3,7 +3,7 @@ import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import { loadState, saveState } from '@services/localStorageService';
-
+import settingReducer from './setting/reducer';
 import formReducer from './form/reducer';
 import reducerAuth from './auth/reducer';
 
@@ -11,7 +11,8 @@ export const history = createBrowserHistory();
 
 const rootStore = combineReducers({
   form: formReducer,
-  auth: reducerAuth
+  auth: reducerAuth,
+  setting: settingReducer
 });
 
 const persistState = loadState();
@@ -27,7 +28,8 @@ const store = createStore(
 
 store.subscribe(() => {
   saveState({
-    auth: store.getState().auth
+    auth: store.getState().auth,
+    setting: store.getState().setting
   });
 });
 

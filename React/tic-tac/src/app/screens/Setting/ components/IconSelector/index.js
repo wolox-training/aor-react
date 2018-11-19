@@ -9,7 +9,6 @@ import style from './style.scss';
 library.add(fas);
 
 class IconSelector extends Component {
-  // eslint-disable-next-line
   state = {
     icon: '',
     icons: [
@@ -21,24 +20,27 @@ class IconSelector extends Component {
   };
 
   // eslint-disable-next-line
-  handleClick = (i, props) => {
-    const oldIcon = i;
-    const newIcon = this.setState(this.props.icon);
-    // eslint-disable-next-line
-    console.log(i, newIcon, oldIcon);
+  handleClick = icon => {
+    this.props.onSelect(icon);
   };
+
   render() {
-    const title = `Player: x`;
+    const title = 'Player ';
 
     return (
       <Fragment>
         <div className={style.player}>
-          <h2 className={style.title}>{title}</h2>
+          <h2 className={style.title}>
+            {title}:
+            <FontAwesomeIcon icon={this.props.selectedIcon} />
+          </h2>
           <div className={style.icons}>
             {this.state.icons.map(el => (
               <FontAwesomeIcon
                 icon={el.name}
-                className={style.icon}
+                className={`${style.icon} ${
+                  el.name == this.props.selectedIcon ? style.selected : ''
+                }`}
                 key={el.id}
                 onClick={() => this.handleClick(el.name)}
               />
@@ -50,7 +52,9 @@ class IconSelector extends Component {
   }
 }
 IconSelector.propTypes = {
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  selectedIcon: PropTypes.string,
+  onSelect: PropTypes.func
 };
 
 export default IconSelector;

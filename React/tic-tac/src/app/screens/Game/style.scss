@@ -30,6 +30,18 @@
   }
 }
 
+.xPlayer {
+  color: $color-red;
+  display: inline-flex;
+  margin: 10px;
+}
+
+.oPlayer {
+  color: $color-green;
+  display: inline-flex;
+  margin: 10px;
+}
+
 .showMove {
   background-color: $bg-gray-dark;
   border: 3px solid $color-gray;

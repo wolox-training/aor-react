@@ -26,6 +26,11 @@
     background-color: $bg-gray-dark;
     color: #FFF;
   }
+
+  &.selected {
+    background-color: $bg-gray-dark;
+    color: #FFF;
+  }
 }
 .title {
   color: $color-green;

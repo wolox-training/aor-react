@@ -1,9 +1,12 @@
 {
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
     }
   },
   "rules": {
@@ -12,6 +15,6 @@
     "semi": ["error", "always"],
     "comma-dangle": ["error", "never"],
     "no-cond-assign": ["error", "always"],
-    "quotes" : [2, "single"]
+    "quotes": [2, "single"]
   }
 }

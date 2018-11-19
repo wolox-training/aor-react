@@ -22,10 +22,14 @@
   &:focus {
     outline: none;
   }
+}
 
-  &:nth-child(2n) {
-    color: $color-red;
-  }
+.xPlayer {
+  color: $color-red;
+}
+
+.oPlayer {
+  color: $color-green;
 }
 
 .container {

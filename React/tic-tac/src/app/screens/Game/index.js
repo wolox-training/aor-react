@@ -1,13 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import calculateWinner from '@utils/gameUtils';
 import Header from '@components/Header';
-
+import { connect } from 'react-redux';
 import Board from './components/Board';
 import style from './style.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Game extends Component {
   state = {
-    history: [{ squares: Array(9).fill(null) }],
+    history: [{ squares: Array(9).fill({value:null, xplayer:true, key:null}) }],
     stepNumber: 0,
     xIsNext: true
   };
@@ -17,11 +18,15 @@ class Game extends Component {
     const current = history[history.length - 1];
     const squares = current.squares.slice();
 
-    if (calculateWinner(squares) || squares[i]) {
+    if (calculateWinner(squares) || squares[i].value) {
       return;
     }
 
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = {
+      value:this.state.xIsNext ? this.props.playerOne : this.props.playerTwo, 
+      xplayer:this.state.xIsNext,
+      key: this.state.xIsNext ? 'x':'o'
+    };
 
     this.setState({
       history: history.concat([{ squares }]),
@@ -56,10 +61,13 @@ class Game extends Component {
     const moves = history.map(this.mapMove);
 
     let status;
+    let label;
     if (winner) {
-      status = `Winner: ${winner}`;
+      status = winner == 'x' ? this.props.playerOne : this.props.playerTwo;
+      label = 'Winner';
     } else {
-      status = `Next Player: ${this.state.xIsNext ? `X` : `O`}`;
+      status = this.state.xIsNext ? this.props.playerOne : this.props.playerTwo;
+      label = 'Next Player';
     }
 
     return (
@@ -70,7 +78,9 @@ class Game extends Component {
             <Board squares={current.squares} onClick={this.handleClick} />
           </div>
           <div className={style.view}>
-            <div className={style.title}>{status}</div>
+            <div className={style.title}>
+              {label}:<div className={winner == 'x' || this.state.xIsNext? style.xPlayer : style.oPlayer}> <FontAwesomeIcon icon={status} /></div>
+            </div>
             <ol className={style.listMove}>{moves}</ol>
           </div>
         </div>
@@ -78,4 +88,10 @@ class Game extends Component {
     );
   }
 }
-export default Game;
+
+const MapStateToProps = state => ({
+  playerOne: state.setting.playerOne,
+  playerTwo: state.setting.playerTwo
+});
+
+export default connect(MapStateToProps)(Game);
