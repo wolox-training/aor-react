@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Header from '@components/Header';
 import actions from '@redux/setting/actions';
-import IconSelector from './ components/IconSelector';
+import PropTypes from 'prop-types';
+
 import { connect } from 'react-redux';
+import IconSelector from './ components/IconSelector';
 import style from './style.scss';
 
 class Setting extends Component {
@@ -16,18 +18,22 @@ class Setting extends Component {
       <Fragment>
         <Header />
         <div className={style.players}>
-        <IconSelector
-          selectedIcon={this.props.playerOne}
-          onSelect={icon => this.handleSelect(icon, true)}
-        />
-        <IconSelector
-          selectedIcon={this.props.playerTwo}
-          onSelect={icon => this.handleSelect(icon, false)}
-        />
+          <IconSelector
+            selectedIcon={this.props.playerOne}
+            onSelect={icon => this.handleSelect(icon, true)}
+          />
+          <IconSelector
+            selectedIcon={this.props.playerTwo}
+            onSelect={icon => this.handleSelect(icon, false)}
+          />
         </div>
       </Fragment>
     );
   }
+}
+
+Setting.PropTypes = {
+  selectedIcon: PropTypes.bool
 }
 
 const MapStateToProps = state => ({
