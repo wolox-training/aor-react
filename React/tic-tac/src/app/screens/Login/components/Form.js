@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 
-import validate from '../validate';
+import validate from '../components/formField/validate';
 
 import style from './styles.scss';
 import renderField from './formField/index';

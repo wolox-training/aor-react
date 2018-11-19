@@ -2,10 +2,10 @@ import Service from '@services/UserService';
 
 export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
 
-function logInTrue(payload) {
+function logInTrue() {
   return {
     type: actions.LOGIN,
-    loggedIn: payload
+    loggedIn: true
   };
 }
 
@@ -14,7 +14,7 @@ function logIn(payload) {
     Service(payload)
       .then(response => {
         if (response.ok) {
-          dispatch(logInTrue(true));
+          dispatch(logInTrue());
         } else {
           throw new Error();
         }
