@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import actions from '@redux/auth/actions';
 
+import routesHeader from './constants';
 import style from './styles.scss';
+
+console.log(routesHeader);
 
 class Header extends Component {
   render() {
@@ -18,14 +21,11 @@ class Header extends Component {
         </div>
         <div className={` ${style.child} ${style.alignright}`}>
           <ul className={style.menu}>
-          <li> <Link className={style.link} to='/game'>Game</Link></li>
-          <li> <Link className={style.link} to='/setting'>Setting</Link></li>
+            {routesHeader.map(route =>(
+            <li><Link className={style.link} to={route.path}>{route.name}</Link></li>
+            ))}
             <li>
-              <button
-                type="submit"
-                className={style.button}
-                onClick={this.props.logOut}
-              >
+              <button type="submit" className={style.button} onClick={this.props.logOut}>
                 LogOut
               </button>
             </li>
