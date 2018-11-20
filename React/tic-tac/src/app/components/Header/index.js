@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import actions from '@redux/auth/actions';
 import PropTypes from 'prop-types';
 
-import style from './styles.scss';
+import Header from './layout';
 
-class Exit extends Component {
-  render() {
-    return (
-      <button type="submit" className={style.button} onClick={this.props.logOut}>
-        LogOut
-      </button>
-    );
-  }
+function HeaderContainer({ logOut }) {
+  return <Header logOut={logOut} />;
 }
 
-Exit.propTypes = {
+HeaderContainer.propTypes = {
   logOut: PropTypes.func
 };
 
@@ -30,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Exit);
+)(HeaderContainer);
