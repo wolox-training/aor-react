@@ -2,13 +2,6 @@ import Service from '@services/UserService';
 
 export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
 
-function logInTrue(payload) {
-  return {
-    type: actions.LOGIN,
-    payload
-  };
-}
-
 function logIn(payload) {
   return dispatch => {
     Service(payload)
@@ -32,4 +25,4 @@ function logOut() {
   };
 }
 
-export default { logInTrue, logOut, logIn };
+export default { logOut, logIn };
