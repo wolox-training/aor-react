@@ -2,15 +2,15 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
+import { reducer as form } from 'redux-form';
 import { loadState, saveState } from '@services/localStorageService';
 
-import formReducer from './form/reducer';
 import reducerAuth from './auth/reducer';
 
 export const history = createBrowserHistory();
 
 const rootStore = combineReducers({
-  form: formReducer,
+  form,
   auth: reducerAuth
 });
 
