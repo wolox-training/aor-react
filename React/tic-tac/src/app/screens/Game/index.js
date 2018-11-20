@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import calculateWinner from '@utils/gameUtils';
-import Header from '@components/Header';
+import Layout from '@components/Header/layout';
 
 import Board from './components/Board';
 import style from './style.scss';
@@ -64,7 +64,7 @@ class Game extends Component {
 
     return (
       <Fragment>
-        <Header />
+        <Layout />
         <div className={style.game}>
           <div className={`${style.view} ${style.viewFeatured}`}>
             <Board squares={current.squares} onClick={this.handleClick} />
