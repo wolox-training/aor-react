@@ -13,7 +13,6 @@ body {
 
 .link {
   color: $color-gray;
-  color: #333;
   font-family: 'Pacifico', cursive;
   font-size: $font-medium;
   padding: 10px;
@@ -22,6 +21,10 @@ body {
   &:hover {
     color: $color-medium-gray;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .selected {
+    color: $color-medium-gray;
   }
 }
 

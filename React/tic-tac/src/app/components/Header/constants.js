@@ -1,19 +1,16 @@
-import Game from '@screens/Game';
-import Setting from '@screens/Setting';
-
 const routesHeader = [
   {
     path: '/game',
-    key: 1,
-    name: Game,
+    key: 5,
+    name: 'Game',
     exact: false,
     protected: true
   },
   {
     path: '/setting',
-    name: Setting,
+    name: 'Setting',
     exact: false,
-    key: 1,
+    key: 6,
     protected: true
   }
 ];
