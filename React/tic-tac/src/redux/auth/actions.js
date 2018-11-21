@@ -2,24 +2,17 @@ import Service from '@services/UserService';
 
 export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
 
-function logInTrue(payload) {
-  return {
-    type: actions.LOGIN,
-    loggedIn: payload
-  };
-}
-
 function logIn(payload) {
-  return dispatch => {
-    Service(payload)
-      .then(response => {
-        if (response.ok) {
-          dispatch(logInTrue(true));
-        } else {
-          throw new Error();
-        }
-      })
-      .catch(() => {});
+  return async dispatch => {
+    const response = await Service(payload);
+    if (response.ok) {
+      dispatch({
+        type: actions.LOGIN,
+        payload: { loggedIn: true }
+      });
+    } else {
+      throw new Error();
+    }
   };
 }
 
@@ -29,4 +22,4 @@ function logOut() {
   };
 }
 
-export default { logInTrue, logOut, logIn };
+export default { logOut, logIn };
