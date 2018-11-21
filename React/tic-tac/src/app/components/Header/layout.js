@@ -7,12 +7,11 @@ import routesHeader from './constants.js';
 import style from './styles.scss';
 
 function Header({ logOut }) {
-  renderRoutes = () =>
-    routesHeader.map(route => (
-      <Link className={style.link} key={route.key} to={route.path}>
-        {route.name}
-      </Link>
-    ));
+  const renderRoutes = routesHeader.map(route => (
+    <Link className={style.link} key={route.key} to={route.path}>
+      {route.name}
+    </Link>
+  ));
 
   return (
     <header className={style.appHeader}>
@@ -23,7 +22,7 @@ function Header({ logOut }) {
       </div>
       <div className={` ${style.child} ${style.alignright}`}>
         <ul className={style.menu}>
-          {this.renderRoutes()}
+          {renderRoutes}
           <li>
             <button type="submit" className={style.button} onClick={logOut}>
               LogOut

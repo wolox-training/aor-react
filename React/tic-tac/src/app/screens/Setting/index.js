@@ -38,16 +38,16 @@ Setting.propTypes = {
   playerTwo: PropTypes.string
 };
 
-const MapStateToProps = state => ({
+const mapStateToProps = state => ({
   playerOne: state.setting.playerOne,
   playerTwo: state.setting.playerTwo
 });
 
-const MapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   setIcon: (icon, isPlayerOne) => dispatch(actions.setIcon(icon, isPlayerOne))
 });
 
 export default connect(
-  MapStateToProps,
-  MapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Setting);

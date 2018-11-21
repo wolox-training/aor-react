@@ -4,6 +4,7 @@ import Header from '@components/Header';
 import { connect } from 'react-redux';
 import Board from './components/Board';
 import style from './style.scss';
+import Move from './components/MoveEntered';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Game extends Component {
@@ -42,17 +43,7 @@ class Game extends Component {
     });
   }
 
-  // eslint-disable-next-line
-  mapMove = (step, move) => {
-    const desc = `${move ? `Go to move #${move}` : 'Go to game start'}`;
-    return (
-      <li className={style.listMoveButton} key={move}>
-        <button className={style.showMove} onClick={() => this.jumpTo(move)}>
-          {desc}
-        </button>
-      </li>
-    );
-  };
+  mapMove = (step, move) => <Move key={step} onClick={this.jumpTo} move={move}/>
 
   render() {
     const history = this.state.history;
@@ -89,9 +80,11 @@ class Game extends Component {
   }
 }
 
-const MapStateToProps = state => ({
+const mapStateToProps = state => ({
   playerOne: state.setting.playerOne,
   playerTwo: state.setting.playerTwo
 });
 
-export default connect(MapStateToProps)(Game);
+
+
+export default connect(mapStateToProps)(Game);
