@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import Header from '@components/Header';
 import actions from '@redux/setting/actions';
 import PropTypes from 'prop-types';
-
 import { connect } from 'react-redux';
+
 import IconSelector from './ components/IconSelector';
 import style from './style.scss';
 
@@ -32,9 +32,11 @@ class Setting extends Component {
   }
 }
 
-Setting.PropTypes = {
-  selectedIcon: PropTypes.bool
-}
+Setting.propTypes = {
+  setIcon: PropTypes.func,
+  playerOne: PropTypes.string,
+  playerTwo: PropTypes.string
+};
 
 const MapStateToProps = state => ({
   playerOne: state.setting.playerOne,
