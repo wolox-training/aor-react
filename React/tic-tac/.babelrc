@@ -10,7 +10,10 @@
           "@screens": "./src/app/screens",
           "@redux": "./src/redux",
           "@assets": "./src/assets",
-          "@utils": "./src/utils"
+          "@utils": "./src/utils",
+          "@config": "./src/config",
+          "@services": "./src/services",
+          "@login": "./src/screens/Login"
         }
       }
     ]

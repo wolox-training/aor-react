@@ -1,15 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import Header from '@components/Header';
-import Game from '@screens/Game/';
+import React, { Component } from 'react';
+import Routes from '@components/Router';
 
 class App extends Component {
   render() {
-    return (
-      <Fragment>
-        <Header />
-        <Game />
-      </Fragment>
-    );
+    return <Routes />;
   }
 }
 

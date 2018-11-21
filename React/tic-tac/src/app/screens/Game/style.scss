@@ -3,16 +3,21 @@
 @import 'backgrounds';
 
 .game {
+  display: flex;
   margin: 0 auto;
-  width: 40%;
+  width: 60%;
+}
+
+.viewFeatured {
+  flex-basis: 40%;
 }
 
 .view {
-  display: inline-block;
+  flex: 200px;
   vertical-align: top;
-  width: 45%;
 
   .listMove {
+    display: block;
     font-weight: bold;
     padding: 0;
   }
@@ -40,5 +45,30 @@
 
   &:hover {
     background-color: $bg-green;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .game {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .view,
+  .viewFeatured {
+    display: block;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .game {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .row {
+    text-align: center;
   }
 }

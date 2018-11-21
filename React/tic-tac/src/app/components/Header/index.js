@@ -1,17 +1,27 @@
-import React, { Component } from 'react';
-import logo from '@assets/logo.svg';
+import React from 'react';
+import { connect } from 'react-redux';
+import actions from '@redux/auth/actions';
+import PropTypes from 'prop-types';
 
-import style from './styles.scss';
+import Header from './layout';
 
-class Header extends Component {
-  render() {
-    return (
-      <header className={style.appHeader}>
-        <img src={logo} className={style.appLogo} alt="logo" />
-        <h1 className={style.appTitle}>Tic Tac Toe</h1>
-      </header>
-    );
-  }
+function HeaderContainer({ logOut }) {
+  return <Header logOut={logOut} />;
 }
 
-export default Header;
+HeaderContainer.propTypes = {
+  logOut: PropTypes.func
+};
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth
+});
+
+const mapDispatchToProps = dispatch => ({
+  logOut: () => dispatch(actions.logOut())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HeaderContainer);
