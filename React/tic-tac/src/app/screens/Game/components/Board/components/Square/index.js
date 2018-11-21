@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import style from './style.scss';
 
 class Square extends Component {
@@ -10,8 +11,11 @@ class Square extends Component {
 
   render() {
     return (
-      <button className={`${style.square} ${this.props.xplayer ? style.xPlayer: style.oPlayer}`} onClick={this.handleClick}>
-        {this.props.value !== null ? <FontAwesomeIcon icon={this.props.value} /> : null }
+      <button
+        className={`${style.square} ${this.props.xplayer ? style.xPlayer : style.oPlayer}`}
+        onClick={this.handleClick}
+      >
+        {this.props.value !== null ? <FontAwesomeIcon icon={this.props.value} /> : null}
       </button>
     );
   }
