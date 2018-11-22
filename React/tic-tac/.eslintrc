@@ -12,11 +12,7 @@
     },
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "prettier",
-    "flowtype"
-  ],
+  "plugins": ["react", "prettier", "flowtype"],
   "extends": [
     "eslint:recommended",
     "airbnb",
@@ -39,7 +35,7 @@
     "no-nested-ternary": "off",
     "react/require-default-props": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".ejs"] }],
-    "react/prop-types": [2, { "ignore": ["style", "children", "dispatch"] } ],
+    "react/prop-types": [2, { "ignore": ["style", "children", "dispatch"] }],
     "react/prefer-stateless-function": "off",
     "import/order": "off",
     "import/prefer-default-export": "off",
@@ -50,17 +46,14 @@
     "import/default": "off",
     "import/namespace": "off",
     "import/no-absolute-path": "error",
-    "no-undef":"off"
+    "no-undef": "off",
+    "eqeqeq": 0,
+    "require-await": "warn"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".android.js",
-          ".ios.js"
-        ]
+        "extensions": [".js", ".jsx", ".android.js", ".ios.js"]
       }
     }
   }
