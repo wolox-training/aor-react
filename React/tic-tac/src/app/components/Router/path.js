@@ -1,6 +1,6 @@
 import LoginForm from '@screens/Login';
 import Game from '@screens/Game';
-import notFound from '@screens/NotFound/notFound';
+import NotFound from '@screens/NotFound/notFound';
 import Setting from '@screens/Setting';
 
 const routes = [
@@ -26,7 +26,7 @@ const routes = [
     protected: true
   },
   {
-    renderComponent: notFound,
+    renderComponent: NotFound,
     key: 3,
     protected: true
   }

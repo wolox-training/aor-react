@@ -11,16 +11,18 @@ import State from './icons';
 library.add(fas);
 
 class IconSelector extends Component {
-  
-  changeIcon = (icon) => {
+  changeIcon = icon => {
     this.props.onSelect(icon);
-  }
+  };
 
   renderIcons() {
     return State.icons.map(icons => (
-      <Icon name={icons.name} key={icons.id} 
-      className={`${style.icon} ${icons.name == this.props.selectedIcon ? style.selected : ''}`}
-      onClick={this.changeIcon}/>
+      <Icon
+        name={icons.name}
+        key={icons.id}
+        className={`${style.icon} ${icons.name === this.props.selectedIcon ? style.selected : ''}`}
+        onClick={this.changeIcon}
+      />
     ));
   }
 
@@ -43,7 +45,6 @@ class IconSelector extends Component {
   }
 }
 IconSelector.propTypes = {
-  icon: PropTypes.string,
   selectedIcon: PropTypes.string,
   onSelect: PropTypes.func
 };
