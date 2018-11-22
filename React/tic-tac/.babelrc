@@ -12,8 +12,7 @@
           "@assets": "./src/assets",
           "@utils": "./src/utils",
           "@config": "./src/config",
-          "@services": "./src/services",
-          "@header": "./src/Header"
+          "@services": "./src/services"
         }
       }
     ]
