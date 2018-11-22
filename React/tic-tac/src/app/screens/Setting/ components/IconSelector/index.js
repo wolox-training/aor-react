@@ -4,6 +4,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import PropTypes from 'prop-types';
 
+import Icon from './components/Icon';
 import style from './style.scss';
 import State from './icons';
 
@@ -11,11 +12,15 @@ library.add(fas);
 
 class IconSelector extends Component {
   
+  changeIcon = (icon) => {
+    this.props.onSelect(icon);
+  }
+
   renderIcons() {
     return State.icons.map(icons => (
-      <FontAwesomeIcon icon={icons.name} key={icons.id} 
+      <Icon name={icons.name} key={icons.id} 
       className={`${style.icon} ${icons.name == this.props.selectedIcon ? style.selected : ''}`}
-      onClick={() => this.props.onSelect(icons.name)}  />
+      onClick={this.changeIcon}/>
     ));
   }
 

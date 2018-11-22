@@ -36,14 +36,14 @@ class Game extends Component {
     });
   };
 
-  jumpTo(step) {
+  jumpTo = (step) => {
     this.setState({
       stepNumber: step,
       xIsNext: step % 2 === 0
     });
   }
 
-  mapMove = (step, move) => <Move key={step} onClick={this.jumpTo} move={move}/>
+  mapMove = (step, move) => <Move key={move} onClick={this.jumpTo} move={move}/>
 
   render() {
     const history = this.state.history;

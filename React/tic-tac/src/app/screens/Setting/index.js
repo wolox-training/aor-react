@@ -9,23 +9,24 @@ import style from './style.scss';
 
 class Setting extends Component {
   handleSelect(icon, isPlayerOne) {
-    console.log('icono ---->: ', icon);
     this.props.setIcon(icon, isPlayerOne);
   }
+
+  selectPlayerOne = icon => {
+    this.handleSelect(icon, true);
+  };
+
+  selectPlayerTwo = icon => {
+    this.handleSelect(icon, false);
+  };
 
   render() {
     return (
       <Fragment>
         <Header />
         <div className={style.players}>
-          <IconSelector
-            selectedIcon={this.props.playerOne}
-            onSelect={icon => this.handleSelect(icon, true)}
-          />
-          <IconSelector
-            selectedIcon={this.props.playerTwo}
-            onSelect={icon => this.handleSelect(icon, false)}
-          />
+          <IconSelector selectedIcon={this.props.playerOne} onSelect={this.selectPlayerOne} />
+          <IconSelector selectedIcon={this.props.playerTwo} onSelect={this.selectPlayerTwo} />
         </div>
       </Fragment>
     );
