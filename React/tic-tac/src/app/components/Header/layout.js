@@ -1,16 +1,16 @@
 import React from 'react';
 import logo from '@assets/logo.svg';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import routesHeader from './constants.js';
 import style from './styles.scss';
 
 function Header({ logOut }) {
   const renderRoutes = routesHeader.map(route => (
-    <Link className={style.link} key={route.key} to={route.path}>
+    <NavLink activeClassName={style.selected} className={style.link} key={route.key} to={route.path}>
       {route.name}
-    </Link>
+    </NavLink>
   ));
 
   return (

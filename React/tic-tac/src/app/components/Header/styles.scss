@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+.selected {
+  color: $color-medium-gray !important;
+}
+
 .app-logo {
   animation: app-logo-spin infinite 20s linear;
   height: 100px;
