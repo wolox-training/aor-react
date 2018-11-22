@@ -48,7 +48,8 @@
     "import/no-absolute-path": "error",
     "no-undef": "off",
     "eqeqeq": 0,
-    "require-await": "warn"
+    "require-await": "warn",
+    "requirePaddingNewLinesAfterUseStrict": true
   },
   "settings": {
     "import/resolver": {
