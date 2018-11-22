@@ -9,6 +9,7 @@ class Icon extends Component {
 
   render() {
     const { name } = this.props;
+
     return <FontAwesomeIcon className={this.props.className} icon={name} onClick={this.handleClick} />;
   }
 }
