@@ -6,6 +6,7 @@ class Icon extends Component {
   handleClick = () => {
     this.props.onClick(this.props.name);
   };
+
   render() {
     const { name } = this.props;
     return <FontAwesomeIcon className={this.props.className} icon={name} onClick={this.handleClick} />;
