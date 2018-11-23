@@ -16,7 +16,7 @@ class IconSelector extends Component {
   };
 
   renderIcons() {
-    return State.icons.map(icons => (
+    return State.map(icons => (
       <Icon
         name={icons.name}
         key={icons.id}

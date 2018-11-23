@@ -50,8 +50,10 @@
     "no-undef": "off",
     "eqeqeq": 0,
     "require-await": "warn",
-    "requirePaddingNewLineAfterVariableDeclaration": true,
-    "newline-after-var": 0
+    "requirePaddingNewLineAfterVariableDeclaration": 0,
+    "newline-after-var": 0,
+    "no-underscore-dangle": "off",
+    "no-unused-vars": 0
   },
   "settings": {
     "import/resolver": {
