@@ -16,7 +16,7 @@ class IconSelector extends Component {
   };
 
   renderIcons() {
-    return State.icons.map(icons => (
+    return State.map(icons => (
       <Icon
         name={icons.name}
         key={icons.id}
@@ -27,13 +27,11 @@ class IconSelector extends Component {
   }
 
   render() {
-    const title = 'Player ';
-
     return (
       <Fragment>
         <div className={style.player}>
           <h2 className={style.title}>
-            {title}:{' '}
+            Player :{' '}
             <span className={style.iconTitle}>
               <FontAwesomeIcon icon={this.props.selectedIcon} />
             </span>

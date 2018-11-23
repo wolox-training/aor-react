@@ -12,7 +12,8 @@
           "@assets": "./src/assets",
           "@utils": "./src/utils",
           "@config": "./src/config",
-          "@services": "./src/services"
+          "@services": "./src/services",
+          "@const": "./src/constants"
         }
       }
     ]

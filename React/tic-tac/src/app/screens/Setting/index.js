@@ -4,7 +4,7 @@ import actions from '@redux/setting/actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import IconSelector from './ components/IconSelector';
+import IconSelector from './components/IconSelector';
 import style from './style.scss';
 
 class Setting extends Component {

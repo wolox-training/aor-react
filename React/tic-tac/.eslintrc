@@ -50,7 +50,7 @@
     "no-undef": "off",
     "eqeqeq": 0,
     "require-await": "warn",
-    "requirePaddingNewLineAfterVariableDeclaration": true,
+    "requirePaddingNewLineAfterVariableDeclaration": 0,
     "newline-after-var": 0
   },
   "settings": {

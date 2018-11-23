@@ -1,18 +1,10 @@
 import React from 'react';
 import logo from '@assets/logo.svg';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
-import routesHeader from './constants.js';
 import style from './styles.scss';
 
-function Header({ logOut }) {
-  const renderRoutes = routesHeader.map(route => (
-    <NavLink activeClassName={style.selected} className={style.link} key={route.key} to={route.path}>
-      {route.name}
-    </NavLink>
-  ));
-
+function Header({ logOut, renderRoutes }) {
   return (
     <header className={style.appHeader}>
       <div className={style.child} />
@@ -35,7 +27,8 @@ function Header({ logOut }) {
 }
 
 Header.propTypes = {
-  logOut: PropTypes.func
+  logOut: PropTypes.func,
+  renderRoutes: PropTypes.instanceOf(Array)
 };
 
 export default Header;
