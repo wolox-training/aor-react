@@ -15,12 +15,12 @@ const Routes = props => (
 
 Routes.propTypes = {
   props: PropTypes.shape({
-    loggedIn: PropTypes.bool.isRequired
+    auth: PropTypes.bool.isRequired
   })
 };
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth
+  auth: state.auth
 });
 
 export default connect(mapStateToProps)(Routes);

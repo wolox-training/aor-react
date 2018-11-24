@@ -3,12 +3,12 @@ import { Route, Redirect } from 'react-router-dom';
 
 import routes from './path';
 
-const parseRoutes = ({ loggedIn, ...props }) =>
+const parseRoutes = ({ auth, ...props }) =>
   routes.map(route => {
     let status;
-    if (route.protected && !loggedIn) {
+    if (route.protected && !auth.user) {
       status = <Redirect to="/" />;
-    } else if (!route.protected && loggedIn) {
+    } else if (!route.protected && auth.user) {
       status = <Redirect to="/game" />;
     } else {
       status = <route.renderComponent {...props} />;

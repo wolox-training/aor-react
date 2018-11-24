@@ -1,14 +1,15 @@
+import { createReducer, completeReducer } from 'redux-recompose';
 import { actions } from '@redux/auth/actions';
 
-function reducerAuth(state = false, action) {
-  switch (action.type) {
-    case actions.LOGIN:
-      return action.payload.loggedIn;
-    case actions.LOGOUT:
-      return false;
-    default:
-      return state;
-  }
-}
+const defaultState = {
+  user: null
+};
 
-export default reducerAuth;
+const reducerDescription = {
+  primaryActions: [actions.LOGIN],
+  override: {
+    [actions.LOGOUT]: (state, action) => ({ user: false })
+  }
+};
+
+export default createReducer(defaultState, completeReducer(reducerDescription));

@@ -1,13 +1,13 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { createBrowserHistory } from 'history';
-import { fetchMiddleware } from 'redux-recompose';
+import { fetchMiddleware, configureMergeState } from 'redux-recompose';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import { reducer as form } from 'redux-form';
 import { loadState, saveState } from '@services/localStorageService';
 
 import settingReducer from './setting/reducer';
-import reducerAuth from './auth/rrreducer';
+import reducerAuth from './auth/reducer';
 
 export const history = createBrowserHistory();
 
@@ -18,6 +18,8 @@ const rootStore = combineReducers({
 });
 
 const persistState = loadState();
+
+configureMergeState((state, diff) => ({ ...state, ...diff }));
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
