@@ -12,7 +12,7 @@ class HeaderContainer extends Component {
   renderRoutes = routes
     .filter(route => route.showOnMenu)
     .map(route => (
-      <NavLink activeStyle={{ color: '#666' }} className={style.link} key={route.key} to={route.path}>
+      <NavLink activeClassName={style.selected} className={style.link} key={route.key} to={route.path}>
         {route.name}
       </NavLink>
     ));
