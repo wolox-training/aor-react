@@ -1,8 +1,6 @@
 import Service from '@services/UserService';
 import { createTypes } from 'redux-recompose';
 
-// export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
-
 export const actions = createTypes(['LOGIN', 'LOGOUT'], '@AUTH');
 
 const actionCreators = {

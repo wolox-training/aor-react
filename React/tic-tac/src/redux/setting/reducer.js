@@ -1,15 +1,21 @@
+import { createReducer, completeReducer } from 'redux-recompose';
 import { actions } from '@redux/setting/actions';
 
-function reducerSetting(state = { playerOne: 'times', playerTwo: 'circle' }, action) {
-  switch (action.type) {
-    case actions.ICON:
+const defaultIcon = {
+  playerOne: 'times',
+  playerTwo: 'circle'
+};
+
+const reducera = {
+  primaryActions: [actions.ICON],
+  override: {
+    [actions.ICON]: (state, action) => {
       if (action.isPlayerOne) {
         return { ...state, playerOne: action.icon };
       }
       return { ...state, playerTwo: action.icon };
-    default:
-      return state;
+    }
   }
-}
+};
 
-export default reducerSetting;
+export default createReducer(defaultIcon, completeReducer(reducera));
