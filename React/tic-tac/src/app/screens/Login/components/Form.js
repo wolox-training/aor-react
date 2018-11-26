@@ -8,30 +8,35 @@ import validate from '../components/formField/validate';
 import style from './styles.scss';
 import renderField from './formField/index';
 
-const loginForm = ({ handleSubmit, onSubmit, submitting, onClick }) => (
-  <form onSubmit={handleSubmit(onSubmit)} className={`${style.login} ${style.fadeInDown} ${style.animated}`}>
-    <Field name="email" type="email" component={renderField} label="Email" className={style.inputField} />
-    <Field
-      name="password"
-      type="password"
-      component={renderField}
-      label="Password"
-      className={style.inputField}
-    />
-    <div>
-      <button
-        type="submit"
-        disabled={submitting}
-        className={`${style.inputField} ${style.submit}`}
-        onClick={onClick}
-      >
-        Submit
-      </button>
-    </div>
-  </form>
-);
+function LoginForm({ handleSubmit, onSubmit, submitting, onClick }) {
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={`${style.login} ${style.fadeInDown} ${style.animated}`}
+    >
+      <Field name="email" type="email" component={renderField} label="Email" className={style.inputField} />
+      <Field
+        name="password"
+        type="password"
+        component={renderField}
+        label="Password"
+        className={style.inputField}
+      />
+      <div>
+        <button
+          type="submit"
+          disabled={submitting}
+          className={`${style.inputField} ${style.submit}`}
+          onClick={onClick}
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
 
-loginForm.propTypes = {
+LoginForm.propTypes = {
   handleSubmit: PropTypes.func,
   onSubmit: PropTypes.func.isRequired,
   submitting: PropTypes.bool,
@@ -41,4 +46,4 @@ loginForm.propTypes = {
 export default reduxForm({
   form: FORM_CONST.SYNC_VALIDATION,
   validate
-})(loginForm);
+})(LoginForm);

@@ -74,7 +74,6 @@ class Game extends Component {
             <div className={style.title}>
               {label}:
               <div className={winner === 'x' || this.state.xIsNext ? style.xPlayer : style.oPlayer}>
-                {' '}
                 <FontAwesomeIcon icon={status} />
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import routes from './path';
+import routes from '@const/routes';
 
 const parseRoutes = ({ auth, ...props }) =>
   routes.map(route => {

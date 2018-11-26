@@ -15,17 +15,22 @@ const routes = [
     path: '/game',
     renderComponent: Game,
     key: 2,
+    name: 'Game',
     exact: false,
-    protected: true
+    protected: true,
+    showOnMenu: true
   },
   {
     path: '/setting',
     renderComponent: Setting,
     key: 4,
+    name: 'Setting',
     exact: false,
-    protected: true
+    protected: true,
+    showOnMenu: true
   },
   {
+    path: '/404',
     renderComponent: NotFound,
     key: 3,
     protected: true

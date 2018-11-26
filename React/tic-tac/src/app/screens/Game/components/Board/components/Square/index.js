@@ -15,7 +15,7 @@ class Square extends Component {
         className={`${style.square} ${this.props.xplayer ? style.xPlayer : style.oPlayer}`}
         onClick={this.handleClick}
       >
-        {this.props.value !== null ? <FontAwesomeIcon icon={this.props.value} /> : null}
+        {this.props.value && <FontAwesomeIcon icon={this.props.value} />}
       </button>
     );
   }
