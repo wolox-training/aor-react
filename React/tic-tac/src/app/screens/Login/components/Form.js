@@ -1,13 +1,14 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import PropTypes from 'prop-types';
+
 import FORM_CONST from '../../../../constants/formNames';
 import validate from '../components/formField/validate';
-import PropTypes from 'prop-types';
 
 import style from './styles.scss';
 import renderField from './formField/index';
 
-const loginForm = ({ handleSubmit, onSubmit, submitting, onClick }) => {
+function LoginForm({ handleSubmit, onSubmit, submitting, onClick }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -33,9 +34,9 @@ const loginForm = ({ handleSubmit, onSubmit, submitting, onClick }) => {
       </div>
     </form>
   );
-};
+}
 
-loginForm.propTypes = {
+LoginForm.propTypes = {
   handleSubmit: PropTypes.func,
   onSubmit: PropTypes.func.isRequired,
   submitting: PropTypes.bool,
@@ -45,4 +46,4 @@ loginForm.propTypes = {
 export default reduxForm({
   form: FORM_CONST.SYNC_VALIDATION,
   validate
-})(loginForm);
+})(LoginForm);

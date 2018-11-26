@@ -5,12 +5,14 @@ import thunk from 'redux-thunk';
 import { reducer as form } from 'redux-form';
 import { loadState, saveState } from '@services/localStorageService';
 
+import settingReducer from './setting/reducer';
 import reducerAuth from './auth/reducer';
 
 export const history = createBrowserHistory();
 
 const rootStore = combineReducers({
   form,
+  setting: settingReducer,
   auth: reducerAuth
 });
 
@@ -27,7 +29,8 @@ const store = createStore(
 
 store.subscribe(() => {
   saveState({
-    auth: store.getState().auth
+    auth: store.getState().auth,
+    setting: store.getState().setting
   });
 });
 

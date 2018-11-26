@@ -13,7 +13,7 @@
           "@utils": "./src/utils",
           "@config": "./src/config",
           "@services": "./src/services",
-          "@login": "./src/screens/Login"
+          "@const": "./src/constants"
         }
       }
     ]

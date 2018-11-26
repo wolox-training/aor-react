@@ -3,8 +3,8 @@ function calculateWinner(squares) {
 
   for (let i = 0; i < lines.length; i += 1) {
     const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+    if (squares[a].key && squares[a].key === squares[b].key && squares[a].key === squares[c].key) {
+      return squares[a].key;
     }
   }
   return null;

@@ -8,7 +8,7 @@
   border-radius: 0 25px 0 25px;
   display: inline-flex;
   font-family: $font-cursive;
-  font-size: 24px;
+  font-size: $font-semibig;
   font-weight: bold;
   height: 80px;
   justify-content: center;
@@ -22,10 +22,14 @@
   &:focus {
     outline: none;
   }
+}
 
-  &:nth-child(2n) {
-    color: $color-red;
-  }
+.xPlayer {
+  color: $color-red;
+}
+
+.oPlayer {
+  color: $color-green;
 }
 
 .container {

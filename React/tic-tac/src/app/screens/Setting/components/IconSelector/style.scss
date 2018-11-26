@@ -1,0 +1,56 @@
+@import 'fonts';
+@import 'backgrounds';
+@import 'colors';
+
+.player {
+  background: $bg-gradient-gray-blue;
+  border: 1px solid $bg-gradient-base;
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+  margin: 25px;
+  padding: 25px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.icon {
+  align-content: center;
+  background-color: $bg-green;
+  border: 1px solid $bg-dark-green;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 $bg-dark-green;
+  color: $color-white;
+  cursor: pointer;
+  font-size: $font-big;
+  margin: 10px;
+  padding: 10px 20px;
+  transition-duration: 200ms;
+
+  &:hover {
+    background-color: $bg-gray-dark;
+    border: 1px solid $color-gray;
+    box-shadow: 2px 2px 0 $color-gray;
+    color: #FFF;
+  }
+
+  &.selected {
+    background-color: $color-yellow;
+    border: 1px solid $color-dark-yellow;
+    box-shadow: 2px 2px 0 $color-dark-yellow;
+    color: #FFF;
+  }
+}
+.title {
+  color: $color-dark-gray;
+  font-family: $font-cursive;
+  font-size: $font-big;
+  font-weight: normal;
+}
+
+.iconTitle {
+  color: $color-yellow;
+}

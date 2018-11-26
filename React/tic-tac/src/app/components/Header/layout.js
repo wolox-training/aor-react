@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import style from './styles.scss';
 
-function Header({ logOut }) {
+function Header({ logOut, renderRoutes }) {
   return (
     <header className={style.appHeader}>
       <div className={style.child} />
@@ -14,6 +14,7 @@ function Header({ logOut }) {
       </div>
       <div className={` ${style.child} ${style.alignright}`}>
         <ul className={style.menu}>
+          {renderRoutes}
           <li>
             <button type="submit" className={style.button} onClick={logOut}>
               LogOut
@@ -26,7 +27,8 @@ function Header({ logOut }) {
 }
 
 Header.propTypes = {
-  logOut: PropTypes.func
+  logOut: PropTypes.func,
+  renderRoutes: PropTypes.instanceOf(Array)
 };
 
 export default Header;
