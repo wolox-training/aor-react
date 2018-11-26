@@ -9,8 +9,7 @@ const actionCreators = {
     service: Service,
     payload,
     target: 'user',
-    successSelector: response => response.data.id,
-    failureSelector: response => true
+    successSelector: response => response.data.id
   }),
   logOut: () => ({
     type: actions.LOGOUT,

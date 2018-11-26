@@ -10,10 +10,10 @@ const reducera = {
   primaryActions: [actions.ICON],
   override: {
     [actions.ICON]: (state, action) => {
-      if (action.isPlayerOne) {
-        return { ...state, playerOne: action.icon };
+      if (action.payload.isPlayerOne) {
+        return { ...state, playerOne: action.paylaod.icon };
       }
-      return { ...state, playerTwo: action.icon };
+      return { ...state, playerTwo: action.payload.icon };
     }
   }
 };

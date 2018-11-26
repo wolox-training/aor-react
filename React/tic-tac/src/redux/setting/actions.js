@@ -3,10 +3,9 @@ import { createTypes } from 'redux-recompose';
 export const actions = createTypes(['ICON'], '@ICON');
 
 const actionCreators = {
-  setIcon: (payload, isPlayerOne) => ({
+  setIcon: (icon, isPlayerOne) => ({
     type: actions.ICON,
-    icon: payload,
-    isPlayerOne,
+    payload: { icon, isPlayerOne },
     target: 'changeIcon'
   })
 };
