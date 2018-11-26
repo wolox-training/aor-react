@@ -14,7 +14,7 @@ const actionCreators = {
   logOut: () => ({
     type: actions.LOGOUT,
     target: 'user',
-    payload: { state: false }
+    payload: false
   })
 };
 
