@@ -1,7 +1,7 @@
 import Service from '@services/UserService';
-import { createTypes } from 'redux-recompose';
+import { createTypes, completeTypes } from 'redux-recompose';
 
-export const actions = createTypes(['LOGIN', 'LOGOUT'], '@AUTH');
+export const actions = createTypes(completeTypes(['LOGIN'], ['LOGOUT']), '@AUTH');
 
 const actionCreators = {
   logIn: payload => ({
