@@ -1,25 +1,21 @@
 import Service from '@services/UserService';
+import { createTypes } from 'redux-recompose';
 
-export const actions = { LOGIN: 'LOGIN', LOGOUT: 'LOGOUT' };
+export const actions = createTypes(['LOGIN', 'LOGOUT'], '@AUTH');
 
-function logIn(payload) {
-  return async dispatch => {
-    const response = await Service(payload);
-    if (response.ok) {
-      dispatch({
-        type: actions.LOGIN,
-        payload: { loggedIn: true }
-      });
-    } else {
-      throw new Error();
-    }
-  };
-}
+const actionCreators = {
+  logIn: payload => ({
+    type: actions.LOGIN,
+    service: Service,
+    payload,
+    target: 'user',
+    successSelector: response => response.data.id
+  }),
+  logOut: () => ({
+    type: actions.LOGOUT,
+    target: 'user',
+    payload: false
+  })
+};
 
-function logOut() {
-  return {
-    type: actions.LOGOUT
-  };
-}
-
-export default { logOut, logIn };
+export default actionCreators;

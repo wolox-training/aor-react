@@ -1,5 +1,6 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import { createBrowserHistory } from 'history';
+import { fetchMiddleware, configureMergeState } from 'redux-recompose';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import { reducer as form } from 'redux-form';
@@ -18,12 +19,14 @@ const rootStore = combineReducers({
 
 const persistState = loadState();
 
+configureMergeState((state, diff) => ({ ...state, ...diff }));
+
 /* eslint-disable no-underscore-dangle */
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   connectRouter(history)(rootStore),
   persistState, // new root reducer with router state
-  composeEnhancer(applyMiddleware(routerMiddleware(history), thunk))
+  composeEnhancer(applyMiddleware(routerMiddleware(history), thunk, fetchMiddleware))
 );
 /* eslint-enable */
 

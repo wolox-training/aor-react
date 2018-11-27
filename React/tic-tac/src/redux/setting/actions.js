@@ -1,10 +1,13 @@
-export const actions = { CHANGE_ICON_PLAYER: 'CHANGE_ICON_PLAYER' };
+import { createTypes } from 'redux-recompose';
 
-function setIcon(payload, isPlayerOne) {
-  return {
-    type: actions.CHANGE_ICON_PLAYER,
-    icon: payload,
-    isPlayerOne
-  };
-}
-export default { setIcon };
+export const actions = createTypes(['ICON'], '@ICON');
+
+const actionCreators = {
+  setIcon: (icon, isPlayerOne) => ({
+    type: actions.ICON,
+    payload: { icon, isPlayerOne },
+    target: 'changeIcon'
+  })
+};
+
+export default actionCreators;

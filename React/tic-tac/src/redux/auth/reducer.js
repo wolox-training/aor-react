@@ -1,14 +1,16 @@
+import { createReducer, completeReducer } from 'redux-recompose';
 import { actions } from '@redux/auth/actions';
+import onReadValue from 'redux-recompose/lib/effects/onReadValue';
 
-function reducerAuth(state = false, action) {
-  switch (action.type) {
-    case actions.LOGIN:
-      return action.payload.loggedIn;
-    case actions.LOGOUT:
-      return false;
-    default:
-      return state;
+const defaultState = {
+  user: null
+};
+
+const reducerDescription = {
+  primaryActions: [actions.LOGIN],
+  override: {
+    [actions.LOGOUT]: onReadValue()
   }
-}
+};
 
-export default reducerAuth;
+export default createReducer(defaultState, completeReducer(reducerDescription));
