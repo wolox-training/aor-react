@@ -3,7 +3,8 @@ import style from './style.scss';
 
 function LoaderHOC(WrappedComponent) {
   return function wrapper(props) {
-   return props.userLoading ? (
+    const {userLoading} = props;
+   return userLoading ? (
       <div className={ style.skcubegrid}>
         <div className={` ${style.skcube} ${style.skcube1} `} />
         <div className={` ${style.skcube} ${style.skcube2} `} />
