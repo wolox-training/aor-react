@@ -13,8 +13,7 @@
           "@utils": "./src/utils",
           "@config": "./src/config",
           "@services": "./src/services",
-          "@const": "./src/constants",
-          "@loader" : "./src/withIsLoading"
+          "@const": "./src/constants"
         }
       }
     ]
