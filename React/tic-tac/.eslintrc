@@ -52,6 +52,7 @@
     "require-await": "warn",
     "requirePaddingNewLineAfterVariableDeclaration": 0,
     "newline-after-var": 0,
+    "ignoreChainWithDepth": 0,
     "no-underscore-dangle": "off",
     "no-unused-vars": 0
   },

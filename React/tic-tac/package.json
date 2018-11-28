@@ -27,6 +27,7 @@
     "posttest": "npm run lint"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.1.6",
     "csscomb": "^4.2.0",
     "eslint": "^3.19.0",
     "eslint-config-loopback": "^8.0.0",
